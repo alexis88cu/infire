@@ -1,6 +1,7 @@
 import { getArticles, getArticle, fmtDate } from '@/lib/data';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
+import BlogInteractions from '@/components/BlogInteractions';
 
 export async function generateStaticParams() {
   return getArticles().map(a => ({ slug: a.slug }));
@@ -12,11 +13,32 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   return { title: a.seoTitle || `${a.title} | Infire Inc.`, description: a.seoDescription || a.hook?.slice(0,155) };
 }
 
+function renderBody(body: string) {
+  return body.split('\n\n').map((para, i) => {
+    if (para.startsWith('**') && para.endsWith('**') && para.length < 90) {
+      return <h2 key={i} style={{fontSize:'1.1rem',fontWeight:800,color:'#e6edf3',marginTop:'2rem',marginBottom:'0.75rem'}}>{para.replace(/\*\*/g,'')}</h2>;
+    }
+    if (para.startsWith('*') && para.endsWith('*') && para.length < 80 && !para.startsWith('**')) {
+      return <h3 key={i} style={{fontSize:'0.98rem',fontWeight:700,color:'var(--orange)',marginTop:'1.5rem',marginBottom:'0.5rem'}}>{para.replace(/\*/g,'')}</h3>;
+    }
+    const parts = para.split(/(\*\*[^*]+\*\*)/g);
+    return (
+      <p key={i} style={{color:'#adb5bd',lineHeight:1.85,fontSize:'0.95rem',marginBottom:'1.25rem'}}>
+        {parts.map((part, j) => part.startsWith('**') && part.endsWith('**')
+          ? <strong key={j} style={{color:'#e6edf3',fontWeight:700}}>{part.slice(2,-2)}</strong>
+          : part
+        )}
+      </p>
+    );
+  });
+}
+
 export default function ArticlePage({ params }: { params: { slug: string } }) {
   const a = getArticle(params.slug);
   if (!a) notFound();
   const tags = typeof a.tags === 'string' ? a.tags.split(',').map(t=>t.trim()).filter(Boolean) : (a.tags||[]);
   const related = getArticles().filter(x => x.category === a.category && x.slug !== a.slug).slice(0,2);
+
   return (
     <div style={{maxWidth:'760px',margin:'0 auto',padding:'4rem 2rem'}}>
       <a href="/blog" className="back-link">← Back to Blog</a>
@@ -28,26 +50,28 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
       </div>
       <h1 style={{fontSize:'clamp(1.6rem,4vw,2.2rem)',fontWeight:900,lineHeight:1.25,marginBottom:'0.75rem'}}>{a.title}</h1>
       {a.subtitle && <p style={{color:'#adb5bd',fontSize:'1.05rem',marginBottom:'2rem',lineHeight:1.5}}>{a.subtitle}</p>}
+      {a.featuredImage && (
+        <div style={{borderRadius:'10px',overflow:'hidden',marginBottom:'2rem',aspectRatio:'16/7'}}>
+          <img src={a.featuredImage} alt={a.title} style={{width:'100%',height:'100%',objectFit:'cover'}}/>
+        </div>
+      )}
       <div style={{height:'1px',background:'var(--border)',margin:'2rem 0'}}/>
       {a.hook && (
         <p style={{fontSize:'1.05rem',color:'#c9d1d9',lineHeight:1.8,marginBottom:'2rem',fontStyle:'italic',borderLeft:'3px solid var(--orange)',paddingLeft:'1.25rem'}}>{a.hook}</p>
       )}
-      {a.body && (
-        <div style={{marginBottom:'2.5rem'}}>
-          {a.body.split('\n\n').map((para,i)=>(
-            <p key={i} style={{color:'#adb5bd',lineHeight:1.85,fontSize:'0.95rem',marginBottom:'1.25rem'}}>{para}</p>
-          ))}
-        </div>
-      )}
+      {a.body && <div style={{marginBottom:'2.5rem'}}>{renderBody(a.body)}</div>}
       {a.takeaway && (
         <blockquote style={{background:'rgba(243,121,61,0.08)',border:'1px solid rgba(243,121,61,0.2)',borderLeft:'4px solid var(--orange)',borderRadius:'0 8px 8px 0',padding:'1.25rem 1.5rem',margin:'2.5rem 0',color:'#e6edf3',fontSize:'0.95rem',lineHeight:1.7,fontStyle:'italic'}}>{a.takeaway}</blockquote>
       )}
       {tags.length > 0 && (
-        <div style={{display:'flex',gap:'0.5rem',flexWrap:'wrap',marginBottom:'3rem'}}>
+        <div style={{display:'flex',gap:'0.5rem',flexWrap:'wrap',marginBottom:'2rem'}}>
           {tags.map(tag=><span key={tag} className="tag">{tag}</span>)}
         </div>
       )}
-      <div style={{height:'1px',background:'var(--border)',margin:'2.5rem 0'}}/>
+      <div style={{height:'1px',background:'var(--border)',margin:'2rem 0'}}/>
+
+      <BlogInteractions slug={a.slug} />
+
       {related.length > 0 && (
         <div style={{marginBottom:'2.5rem'}}>
           <h3 style={{fontWeight:700,marginBottom:'1.25rem',fontSize:'1rem'}}>Related Articles</h3>
@@ -62,10 +86,16 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
           </div>
         </div>
       )}
-      <div style={{background:'var(--dark2)',border:'1px solid var(--border)',borderRadius:'12px',padding:'2rem',textAlign:'center'}}>
-        <p style={{fontWeight:700,marginBottom:'0.5rem'}}>Need fire protection engineering on your project?</p>
-        <p style={{color:'var(--gray)',fontSize:'0.88rem',marginBottom:'1.25rem'}}>Infire designs NFPA-compliant systems for residential, commercial, and institutional buildings.</p>
-        <a href="/contact" className="btn-sm">Get a Quote</a>
+
+      <div style={{background:'rgba(243,121,61,0.06)',border:'1px solid rgba(243,121,61,0.2)',borderRadius:'12px',padding:'2rem',textAlign:'center',marginTop:'2rem'}}>
+        <div style={{fontSize:'1.5rem',marginBottom:'0.5rem'}}>🔔</div>
+        <h3 style={{fontWeight:800,marginBottom:'0.5rem',fontSize:'1rem'}}>Get the Weekly Fire Protection Briefing</h3>
+        <p style={{color:'var(--gray)',fontSize:'0.88rem',marginBottom:'1.25rem'}}>
+          New articles on NFPA code updates, system design, and field practice — every week, straight to your inbox.
+        </p>
+        <a href="/subscribe" style={{display:'inline-block',background:'var(--orange)',color:'#fff',padding:'0.7rem 1.75rem',borderRadius:'6px',fontWeight:700,fontSize:'0.88rem',textDecoration:'none'}}>
+          Subscribe Free →
+        </a>
       </div>
     </div>
   );
