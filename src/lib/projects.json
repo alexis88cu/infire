@@ -30,7 +30,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "Legends at Biscayne \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a boutique multifamily residential development in Miami, covering all residential floors, parking structure..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a boutique multifamily residential development in Miami, covering all residential floors, parking structure...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1503437313881-503a91226402?w=600&q=80"
+    ]
   },
   {
     "_id": "1210-brickell-fire-protection-do",
@@ -63,7 +68,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "1210 Brickell \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a boutique multifamily residential development in Miami, covering all residential floors, parking structure..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a boutique multifamily residential development in Miami, covering all residential floors, parking structure...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80"
+    ]
   },
   {
     "_id": "miami-river-residence-faena-do",
@@ -98,7 +108,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "Miami River Residence \u2014 Faena | Infire",
-    "seoDescription": "Full fire protection package for a mid-rise ultra-luxury residential tower in Miami, including concealed sprinkler heads throughout branded amenity deck..."
+    "seoDescription": "Full fire protection package for a mid-rise ultra-luxury residential tower in Miami, including concealed sprinkler heads throughout branded amenity deck...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80",
+      "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=600&q=80",
+      "https://images.unsplash.com/photo-1560707303-4e980ce876ad?w=600&q=80"
+    ]
   },
   {
     "_id": "14-roc-do",
@@ -131,7 +146,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "14 ROC Miami \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a boutique multifamily residential development in Miami, covering all residential floors, parking structure..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a boutique multifamily residential development in Miami, covering all residential floors, parking structure...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&q=80"
+    ]
   },
   {
     "_id": "forma-suites-pad-8-do",
@@ -164,7 +184,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "Forma Suites \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a boutique multifamily residential development in Miami, covering all residential floors, parking structure..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a boutique multifamily residential development in Miami, covering all residential floors, parking structure...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80"
+    ]
   },
   {
     "_id": "tower-36-miami-do",
@@ -198,7 +223,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "Tower 36 \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a boutique multifamily residential development in Miami, covering all residential floors, parking structure..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a boutique multifamily residential development in Miami, covering all residential floors, parking structure...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1542621334-a254cf47733d?w=600&q=80"
+    ]
   },
   {
     "_id": "pmg-sentral-do",
@@ -231,7 +261,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "Sentral Miami \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a boutique multifamily residential development in Miami, covering all residential floors, parking structure..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a boutique multifamily residential development in Miami, covering all residential floors, parking structure...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1504197832061-98bb51c44e22?w=600&q=80"
+    ]
   },
   {
     "_id": "e11even-hotel-residences",
@@ -266,7 +301,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "E11even Hotel & Residences \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Full fire protection package for a high-rise ultra-luxury residential tower in Miami, including concealed sprinkler heads throughout branded amenity dec..."
+    "seoDescription": "Full fire protection package for a high-rise ultra-luxury residential tower in Miami, including concealed sprinkler heads throughout branded amenity dec...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80",
+      "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=600&q=80",
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80"
+    ]
   },
   {
     "_id": "e11even-beyond",
@@ -301,7 +341,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "E11even Beyond Miami \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Full fire protection package for a high-rise ultra-luxury residential tower in Miami, including concealed sprinkler heads throughout branded amenity dec..."
+    "seoDescription": "Full fire protection package for a high-rise ultra-luxury residential tower in Miami, including concealed sprinkler heads throughout branded amenity dec...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80",
+      "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=600&q=80",
+      "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&q=80"
+    ]
   },
   {
     "_id": "broward-county-supervisor-of-elections",
@@ -334,7 +379,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "Broward County Elections HQ \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Full fire suppression and life-safety package for a civic & institutional project in Ft. Lauderdale, designed to NFPA 13 standards with hydraulic calcul..."
+    "seoDescription": "Full fire suppression and life-safety package for a civic & institutional project in Ft. Lauderdale, designed to NFPA 13 standards with hydraulic calcul...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?w=600&q=80",
+      "https://images.unsplash.com/photo-1478749235066-21f5f7d5f1b3?w=600&q=80",
+      "https://images.unsplash.com/photo-1503437313881-503a91226402?w=600&q=80"
+    ]
   },
   {
     "_id": "alta-flagler-9600-miami",
@@ -367,7 +417,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "Alta Flagler 9600 \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Miami, covering all residential floors, parking struct..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Miami, covering all residential floors, parking struct...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80"
+    ]
   },
   {
     "_id": "sonata-apt-pompano-beach",
@@ -399,7 +454,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "Sonata Apartments \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a boutique multifamily residential development in Pompano Beach, covering all residential floors, parking s..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a boutique multifamily residential development in Pompano Beach, covering all residential floors, parking s...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1560707303-4e980ce876ad?w=600&q=80"
+    ]
   },
   {
     "_id": "5250-phase-ii-tower-3-and-garage-aka-downtown-doral",
@@ -432,7 +492,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "Downtown Doral \u2014 5250 Tower 3 | Infire",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Doral, covering all residential floors, parking struct..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Doral, covering all residential floors, parking struct...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&q=80"
+    ]
   },
   {
     "_id": "brisas-del-este-ph-i-res",
@@ -465,7 +530,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "Brisas Del Este Phase I \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a boutique multifamily residential development in Miami, covering all residential floors, parking structure..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a boutique multifamily residential development in Miami, covering all residential floors, parking structure...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80"
+    ]
   },
   {
     "_id": "heron-estates-townhomes",
@@ -497,7 +567,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "Heron Estates Townhomes \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a boutique multifamily residential development in Riviera Beach, covering all residential floors, parking s..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a boutique multifamily residential development in Riviera Beach, covering all residential floors, parking s...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80",
+      "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=600&q=80",
+      "https://images.unsplash.com/photo-1542621334-a254cf47733d?w=600&q=80"
+    ]
   },
   {
     "_id": "brisas-del-este-phase-1-pg",
@@ -530,7 +605,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "Brisas Del Este \u2014 Parking Garage | Infire",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a boutique multifamily residential development in Miami, covering all residential floors, parking structure..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a boutique multifamily residential development in Miami, covering all residential floors, parking structure...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1504197832061-98bb51c44e22?w=600&q=80"
+    ]
   },
   {
     "_id": "f3-marina-ftl-constru",
@@ -563,7 +643,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "F3 Marina Fort Lauderdale \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "NFPA 303-compliant fire suppression system design for a waterfront marina and mixed-use development, integrating dry standpipes, fuel-area suppression, ..."
+    "seoDescription": "NFPA 303-compliant fire suppression system design for a waterfront marina and mixed-use development, integrating dry standpipes, fuel-area suppression, ...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1504197832061-98bb51c44e22?w=600&q=80",
+      "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&q=80",
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80"
+    ]
   },
   {
     "_id": "1600-ne-2nd-ave-miami",
@@ -596,7 +681,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "1600 NE 2nd Ave - Miami \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Miami, covering all residential floors, parking struct..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Miami, covering all residential floors, parking struct...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&q=80"
+    ]
   },
   {
     "_id": "dr-geoff-sas-atlantic-village",
@@ -628,7 +718,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "DR. Geoff Sas - Atlantic Village | Infire",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a boutique multifamily residential development in Hallandale, covering all residential floors, parking stru..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a boutique multifamily residential development in Hallandale, covering all residential floors, parking stru...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1503437313881-503a91226402?w=600&q=80"
+    ]
   },
   {
     "_id": "clearlinere-2000-wynwood",
@@ -661,7 +756,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "ClearlineRE - 2000 Wynwood \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Miami, covering all residential floors, parking struct..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Miami, covering all residential floors, parking struct...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1451976426598-a7593bd6d0b2?w=600&q=80",
+      "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=600&q=80",
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80"
+    ]
   },
   {
     "_id": "metro-parc-south-hialeah",
@@ -694,7 +794,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "Metro Parc South - Hialeah \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Hialeah, covering all residential floors, parking stru..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Hialeah, covering all residential floors, parking stru...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1560707303-4e980ce876ad?w=600&q=80"
+    ]
   },
   {
     "_id": "mohawk-at-wynwood",
@@ -727,7 +832,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "Mohawk at Wynwood \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Miami, covering all residential floors, parking struct..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Miami, covering all residential floors, parking struct...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1451976426598-a7593bd6d0b2?w=600&q=80",
+      "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=600&q=80",
+      "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&q=80"
+    ]
   },
   {
     "_id": "pbau-student-housing-wpb",
@@ -760,7 +870,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "PBAU Student Housing - WPB \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Full fire suppression and life-safety package for a education project in West Palm Beach, designed to NFPA 13 standards with hydraulic calculations, ris..."
+    "seoDescription": "Full fire suppression and life-safety package for a education project in West Palm Beach, designed to NFPA 13 standards with hydraulic calculations, ris...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1562774053-701939374585?w=600&q=80",
+      "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&q=80",
+      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80"
+    ]
   },
   {
     "_id": "jem-mwc-block-a-naftali-miami",
@@ -793,7 +908,12 @@
     "publishedOnSite": true,
     "featured": true,
     "seoTitle": "Jem - MWC Block A - Naftali - Miami | Infire",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Miami, covering all residential floors, parking struct..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Miami, covering all residential floors, parking struct...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1542621334-a254cf47733d?w=600&q=80"
+    ]
   },
   {
     "_id": "bentley-residences-sunny-isles-beach",
@@ -810,7 +930,7 @@
     "systemsScope": "Dual electric and diesel fire pumps with automatic transfer sequencing | High-rise pressure-zone standpipe system with hose connections at every floor | Concealed wet-pipe heads throughout residential, amenity, and podium levels",
     "narrative": "Bentley Residences - Sunny Isles Beach represents one of South Florida's most complex fire protection engagements in Sunny Isles Beach. Infire delivered a fully coordinated NFPA-compliant system \u2014 from hydraulic calculations and riser design to AHJ submittal and field coordination \u2014 keeping the project on schedule and on spec from permit to final certification.",
     "estimatedSprinklers": 27273,
-    "featuredImage": "/images/projects/spm-3000SouthOcean.jpg",
+    "featuredImage": "/images/projects/bentley-residences.jpg",
     "gallery": [
       "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=900&q=80",
       "https://images.unsplash.com/photo-1430285561322-7808604715df?auto=format&fit=crop&w=900&q=80",
@@ -827,7 +947,12 @@
     "publishedOnSite": true,
     "featured": true,
     "seoTitle": "Bentley Residences - Sunny Isles Beach | Infire",
-    "seoDescription": "Full fire protection package for a high-rise ultra-luxury residential tower in Sunny Isles Beach, including concealed sprinkler heads throughout branded..."
+    "seoDescription": "Full fire protection package for a high-rise ultra-luxury residential tower in Sunny Isles Beach, including concealed sprinkler heads throughout branded...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80",
+      "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=600&q=80",
+      "https://images.unsplash.com/photo-1504197832061-98bb51c44e22?w=600&q=80"
+    ]
   },
   {
     "_id": "aventana",
@@ -860,7 +985,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "Aventana \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Miami, covering all residential floors, parking struct..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Miami, covering all residential floors, parking struct...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80"
+    ]
   },
   {
     "_id": "1401-brickell-santander",
@@ -893,7 +1023,12 @@
     "publishedOnSite": true,
     "featured": true,
     "seoTitle": "1401 Brickell - Santander \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Miami, covering all residential floors, parking struct..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Miami, covering all residential floors, parking struct...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&q=80"
+    ]
   },
   {
     "_id": "71-nobe-bldg-6985-6988",
@@ -926,7 +1061,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "71 Nobe - Bldg 6985 & 6988 \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Miami Beach, covering all residential floors, parking ..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Miami Beach, covering all residential floors, parking ...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1503437313881-503a91226402?w=600&q=80"
+    ]
   },
   {
     "_id": "bay-harbor-towers",
@@ -959,7 +1099,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "Bay Harbor Towers \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Bay Harbor Island, covering all residential floors, pa..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Bay Harbor Island, covering all residential floors, pa...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80"
+    ]
   },
   {
     "_id": "tech-tower-sweetwater",
@@ -992,7 +1137,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "Tech Tower - Sweetwater \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Early-intervention fire suppression system for a data center and technology facility, designed with pre-action dry-pipe systems to protect sensitive ele..."
+    "seoDescription": "Early-intervention fire suppression system for a data center and technology facility, designed with pre-action dry-pipe systems to protect sensitive ele...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80",
+      "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&q=80",
+      "https://images.unsplash.com/photo-1560707303-4e980ce876ad?w=600&q=80"
+    ]
   },
   {
     "_id": "miami-brickell-starlite-hotel",
@@ -1025,7 +1175,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "Miami (Brickell) Starlite Hotel | Infire",
-    "seoDescription": "Full fire protection design-build package for a hotel and mixed-use hospitality project in Miami, coordinating sprinkler layouts with room configuration..."
+    "seoDescription": "Full fire protection design-build package for a hotel and mixed-use hospitality project in Miami, coordinating sprinkler layouts with room configuration...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=600&q=80",
+      "https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=600&q=80",
+      "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&q=80"
+    ]
   },
   {
     "_id": "link-at-douglas-ph-2-tower-3",
@@ -1059,7 +1214,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "Link at Douglas PH 2 - Tower 3 | Infire",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Miami, covering all residential floors, parking struct..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Miami, covering all residential floors, parking struct...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80"
+    ]
   },
   {
     "_id": "rider-at-wynwood",
@@ -1092,7 +1252,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "Rider at Wynwood \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Miami, covering all residential floors, parking struct..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Miami, covering all residential floors, parking struct...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1451976426598-a7593bd6d0b2?w=600&q=80",
+      "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=600&q=80",
+      "https://images.unsplash.com/photo-1542621334-a254cf47733d?w=600&q=80"
+    ]
   },
   {
     "_id": "26-wynwood",
@@ -1125,7 +1290,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "26 Wynwood \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Miami, covering all residential floors, parking struct..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Miami, covering all residential floors, parking struct...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1451976426598-a7593bd6d0b2?w=600&q=80",
+      "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=600&q=80",
+      "https://images.unsplash.com/photo-1504197832061-98bb51c44e22?w=600&q=80"
+    ]
   },
   {
     "_id": "city-of-miami-admin-bldg",
@@ -1158,7 +1328,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "City of Miami Admin Bldg \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Full fire suppression and life-safety package for a civic & institutional project in Miami, designed to NFPA 13 standards with hydraulic calculations, r..."
+    "seoDescription": "Full fire suppression and life-safety package for a civic & institutional project in Miami, designed to NFPA 13 standards with hydraulic calculations, r...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?w=600&q=80",
+      "https://images.unsplash.com/photo-1478749235066-21f5f7d5f1b3?w=600&q=80",
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80"
+    ]
   },
   {
     "_id": "coral-way-27th-ave-miami",
@@ -1191,7 +1366,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "Coral Way & 27th Ave - Miami \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Miami, covering all residential floors, parking struct..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Miami, covering all residential floors, parking struct...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&q=80"
+    ]
   },
   {
     "_id": "nomi-6-north-miami",
@@ -1223,7 +1403,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "Nomi 6 - North Miami \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in North Miami, covering all residential floors, parking ..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in North Miami, covering all residential floors, parking ...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1503437313881-503a91226402?w=600&q=80"
+    ]
   },
   {
     "_id": "plantation-walk",
@@ -1255,7 +1440,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "Plantation Walk \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Plantation, covering all residential floors, parking s..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Plantation, covering all residential floors, parking s...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80"
+    ]
   },
   {
     "_id": "10-city-place-wpb",
@@ -1288,7 +1478,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "10 City Place - WPB \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in West Palm Beach, covering all residential floors, park..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in West Palm Beach, covering all residential floors, park...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1560707303-4e980ce876ad?w=600&q=80"
+    ]
   },
   {
     "_id": "flagler-sky-view",
@@ -1321,7 +1516,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "Flagler Sky View \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Ft. Lauderdale, covering all residential floors, parki..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Ft. Lauderdale, covering all residential floors, parki...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&q=80"
+    ]
   },
   {
     "_id": "uni-dos-14th-st",
@@ -1354,7 +1554,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "Uni Dos (14th St) \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Miami, covering all residential floors, parking struct..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Miami, covering all residential floors, parking struct...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80"
+    ]
   },
   {
     "_id": "tropic-hollywood",
@@ -1386,7 +1591,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "Tropic Hollywood \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Hollywood, covering all residential floors, parking st..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Hollywood, covering all residential floors, parking st...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1542621334-a254cf47733d?w=600&q=80"
+    ]
   },
   {
     "_id": "600-miami-world-ctr",
@@ -1419,7 +1629,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "600 Miami World Ctr \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Miami, covering all residential floors, parking struct..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Miami, covering all residential floors, parking struct...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1504197832061-98bb51c44e22?w=600&q=80"
+    ]
   },
   {
     "_id": "fat-village-multifamily-bldg-1-2",
@@ -1452,7 +1667,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "FAT Village Multifamily Bldg 1 & 2 | Infire",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Ft. Lauderdale, covering all residential floors, parki..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Ft. Lauderdale, covering all residential floors, parki...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80"
+    ]
   },
   {
     "_id": "one-park-tower",
@@ -1485,7 +1705,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "One Park Tower \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in North Miami, covering all residential floors, parking ..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in North Miami, covering all residential floors, parking ...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&q=80"
+    ]
   },
   {
     "_id": "222-residences-ph-2-tower-50-ne-3rd",
@@ -1519,7 +1744,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "222 Residences Ph 2 Tower (50 NE 3rd) | Infire",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Miami, covering all residential floors, parking struct..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Miami, covering all residential floors, parking struct...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1503437313881-503a91226402?w=600&q=80"
+    ]
   },
   {
     "_id": "sonata-cra-space",
@@ -1551,7 +1781,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "Sonata CRA Space \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a boutique multifamily residential development in Pompano Beach, covering all residential floors, parking s..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a boutique multifamily residential development in Pompano Beach, covering all residential floors, parking s...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80"
+    ]
   },
   {
     "_id": "society-wynwood-retail-buildout",
@@ -1584,7 +1819,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "Society Wynwood Retail Buildout | Infire",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a boutique multifamily residential development in Miami, covering all residential floors, parking structure..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a boutique multifamily residential development in Miami, covering all residential floors, parking structure...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1451976426598-a7593bd6d0b2?w=600&q=80",
+      "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=600&q=80",
+      "https://images.unsplash.com/photo-1560707303-4e980ce876ad?w=600&q=80"
+    ]
   },
   {
     "_id": "710-edge",
@@ -1617,7 +1857,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "710 Edge \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Miami, covering all residential floors, parking struct..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Miami, covering all residential floors, parking struct...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&q=80"
+    ]
   },
   {
     "_id": "dolphin-square",
@@ -1649,7 +1894,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "Dolphin Square \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Sweetwater, covering all residential floors, parking s..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Sweetwater, covering all residential floors, parking s...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80"
+    ]
   },
   {
     "_id": "airport-site-apartments",
@@ -1682,7 +1932,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "Airport Site Apartments \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Miami, covering all residential floors, parking struct..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Miami, covering all residential floors, parking struct...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1542621334-a254cf47733d?w=600&q=80"
+    ]
   },
   {
     "_id": "1-southside-park",
@@ -1715,7 +1970,12 @@
     "publishedOnSite": true,
     "featured": true,
     "seoTitle": "1 Southside Park \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Miami, covering all residential floors, parking struct..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Miami, covering all residential floors, parking struct...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1504197832061-98bb51c44e22?w=600&q=80"
+    ]
   },
   {
     "_id": "miami-freedom-park-stadium",
@@ -1748,7 +2008,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "Miami Freedom Park Stadium \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Complete fire protection design for a major-league stadium development in Miami, covering grandstands, concourse levels, skyboxes, and below-grade servi..."
+    "seoDescription": "Complete fire protection design for a major-league stadium development in Miami, covering grandstands, concourse levels, skyboxes, and below-grade servi...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1551958219-acbc595d816f?w=600&q=80",
+      "https://images.unsplash.com/photo-1478749235066-21f5f7d5f1b3?w=600&q=80",
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80"
+    ]
   },
   {
     "_id": "miami-dade-courthouse",
@@ -1781,7 +2046,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "Miami Dade Courthouse \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Full fire suppression and detection package for the new civil courthouse tower, covering courtrooms, clerk offices, and restricted record archives with ..."
+    "seoDescription": "Full fire suppression and detection package for the new civil courthouse tower, covering courtrooms, clerk offices, and restricted record archives with ...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&q=80"
+    ]
   },
   {
     "_id": "elevate-dania-beach-apartments",
@@ -1813,7 +2083,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "Elevate Dania Beach Apartments | Infire",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Dania Beach, covering all residential floors, parking ..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Dania Beach, covering all residential floors, parking ...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1503437313881-503a91226402?w=600&q=80"
+    ]
   },
   {
     "_id": "society-wynwood",
@@ -1846,7 +2121,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "Society Wynwood \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Miami, covering all residential floors, parking struct..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Miami, covering all residential floors, parking struct...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1451976426598-a7593bd6d0b2?w=600&q=80",
+      "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=600&q=80",
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80"
+    ]
   },
   {
     "_id": "miami-world-center-tower",
@@ -1863,7 +2143,7 @@
     "systemsScope": "Combination wet-pipe and dry standpipe system covering all floors and parking | CPVC and steel hybrid riser network with zone control valves per floor | Concealed sprinkler heads throughout units and corridors per NFPA 13",
     "narrative": "Miami World Center -Tower represents a comprehensive fire protection scope in Miami. Infire delivered a fully coordinated NFPA-compliant system \u2014 from hydraulic calculations and riser design to AHJ submittal and field coordination \u2014 keeping the project on schedule and on spec from permit to final certification.",
     "estimatedSprinklers": 8296,
-    "featuredImage": "/images/projects/spm-600-Miami-World.jpg",
+    "featuredImage": "/images/projects/miami-world-center.jpg",
     "gallery": [
       "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=900&q=80",
       "https://images.unsplash.com/photo-1430285561322-7808604715df?auto=format&fit=crop&w=900&q=80",
@@ -1880,7 +2160,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "Miami World Center -Tower \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Miami, covering all residential floors, parking struct..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Miami, covering all residential floors, parking struct...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1560707303-4e980ce876ad?w=600&q=80"
+    ]
   },
   {
     "_id": "miami-waldorf-astoria",
@@ -1915,7 +2200,12 @@
     "publishedOnSite": true,
     "featured": true,
     "seoTitle": "Miami Waldorf Astoria \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Full fire protection package for a high-rise ultra-luxury residential tower in Miami, including concealed sprinkler heads throughout branded amenity dec..."
+    "seoDescription": "Full fire protection package for a high-rise ultra-luxury residential tower in Miami, including concealed sprinkler heads throughout branded amenity dec...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80",
+      "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=600&q=80",
+      "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&q=80"
+    ]
   },
   {
     "_id": "orl-p904-universal",
@@ -1948,7 +2238,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "ORL - P904 Universal \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Orlando, covering all residential floors, parking stru..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Orlando, covering all residential floors, parking stru...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80"
+    ]
   },
   {
     "_id": "29n-wynwood",
@@ -1981,7 +2276,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "29N Wynwood \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Miami, covering all residential floors, parking struct..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Miami, covering all residential floors, parking struct...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1451976426598-a7593bd6d0b2?w=600&q=80",
+      "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=600&q=80",
+      "https://images.unsplash.com/photo-1542621334-a254cf47733d?w=600&q=80"
+    ]
   },
   {
     "_id": "hanover-riverwalk-ft-lauderdale",
@@ -2014,7 +2314,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "Hanover Riverwalk Ft. Lauderdale | Infire",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Ft. Lauderdale, covering all residential floors, parki..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Ft. Lauderdale, covering all residential floors, parki...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1504197832061-98bb51c44e22?w=600&q=80"
+    ]
   },
   {
     "_id": "emerald-towers-elss-pompano",
@@ -2047,7 +2352,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "Emerald Towers ELSS Pompano \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a boutique multifamily residential development in Pompano Beach, covering all residential floors, parking s..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a boutique multifamily residential development in Pompano Beach, covering all residential floors, parking s...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80"
+    ]
   },
   {
     "_id": "3050-aventura-safra-bank",
@@ -2079,7 +2389,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "3050 Aventura - Safra Bank \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Aventura, covering all residential floors, parking str..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Aventura, covering all residential floors, parking str...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&q=80"
+    ]
   },
   {
     "_id": "town-hollywood",
@@ -2111,7 +2426,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "Town Hollywood \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Hollywood, covering all residential floors, parking st..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Hollywood, covering all residential floors, parking st...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1503437313881-503a91226402?w=600&q=80"
+    ]
   },
   {
     "_id": "adderley-apartments",
@@ -2144,7 +2464,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "Adderley Apartments \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Ft. Lauderdale, covering all residential floors, parki..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Ft. Lauderdale, covering all residential floors, parki...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80"
+    ]
   },
   {
     "_id": "legacy-hotel-miami",
@@ -2177,7 +2502,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "Legacy Hotel - Miami \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Full fire protection design-build package for a hotel and mixed-use hospitality project in Miami, coordinating sprinkler layouts with room configuration..."
+    "seoDescription": "Full fire protection design-build package for a hotel and mixed-use hospitality project in Miami, coordinating sprinkler layouts with room configuration...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=600&q=80",
+      "https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=600&q=80",
+      "https://images.unsplash.com/photo-1560707303-4e980ce876ad?w=600&q=80"
+    ]
   },
   {
     "_id": "222-residences-ph-1-tower",
@@ -2211,7 +2541,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "222 Residences Ph 1 Tower \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Miami, covering all residential floors, parking struct..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Miami, covering all residential floors, parking struct...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&q=80"
+    ]
   },
   {
     "_id": "doral-city-place-7",
@@ -2243,7 +2578,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "Doral City Place 7 \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Doral, covering all residential floors, parking struct..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Doral, covering all residential floors, parking struct...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80"
+    ]
   },
   {
     "_id": "okan-tower-miami",
@@ -2260,7 +2600,7 @@
     "systemsScope": "Dual electric and diesel fire pumps with automatic transfer sequencing | High-rise pressure-zone standpipe system with hose connections at every floor | Concealed wet-pipe heads throughout residential, amenity, and podium levels",
     "narrative": "Okan Tower Miami represents a high-complexity fire protection project in Miami. Infire delivered a fully coordinated NFPA-compliant system \u2014 from hydraulic calculations and riser design to AHJ submittal and field coordination \u2014 keeping the project on schedule and on spec from permit to final certification.",
     "estimatedSprinklers": 20627,
-    "featuredImage": "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=900&q=85",
+    "featuredImage": "/images/projects/okan-tower.jpg",
     "gallery": [
       "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=900&q=80",
       "https://images.unsplash.com/photo-1430285561322-7808604715df?auto=format&fit=crop&w=900&q=80",
@@ -2277,7 +2617,12 @@
     "publishedOnSite": true,
     "featured": true,
     "seoTitle": "Okan Tower Miami \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Miami, covering all residential floors, parking struct..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Miami, covering all residential floors, parking struct...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1542621334-a254cf47733d?w=600&q=80"
+    ]
   },
   {
     "_id": "501-first-miami",
@@ -2310,7 +2655,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "501 First Miami \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Miami, covering all residential floors, parking struct..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Miami, covering all residential floors, parking struct...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1504197832061-98bb51c44e22?w=600&q=80"
+    ]
   },
   {
     "_id": "metro-parc-hialeah",
@@ -2343,7 +2693,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "Metro Parc Hialeah \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Hialeah, covering all residential floors, parking stru..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Hialeah, covering all residential floors, parking stru...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80"
+    ]
   },
   {
     "_id": "selene-ft-lauderdale",
@@ -2376,7 +2731,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "Selene Ft. Lauderdale \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Ft. Lauderdale, covering all residential floors, parki..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Ft. Lauderdale, covering all residential floors, parki...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&q=80"
+    ]
   },
   {
     "_id": "bread-building-hollywood",
@@ -2408,7 +2768,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "Bread Building Hollywood \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Hollywood, covering all residential floors, parking st..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Hollywood, covering all residential floors, parking st...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1503437313881-503a91226402?w=600&q=80"
+    ]
   },
   {
     "_id": "broward-county-convention-ctr-hotel-5",
@@ -2441,7 +2806,12 @@
     "publishedOnSite": true,
     "featured": true,
     "seoTitle": "Broward County Convention Ctr Hotel 5 | Infire",
-    "seoDescription": "Large-scale fire suppression and standpipe design for a convention center hotel expansion in Ft. Lauderdale, serving high-occupancy ballrooms, exhibit h..."
+    "seoDescription": "Large-scale fire suppression and standpipe design for a convention center hotel expansion in Ft. Lauderdale, serving high-occupancy ballrooms, exhibit h...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80"
+    ]
   },
   {
     "_id": "advantis-station-at-flagler-village",
@@ -2474,7 +2844,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "Advantis Station at Flagler Village | Infire",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Ft. Lauderdale, covering all residential floors, parki..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Ft. Lauderdale, covering all residential floors, parki...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1560707303-4e980ce876ad?w=600&q=80"
+    ]
   },
   {
     "_id": "r3-raintree",
@@ -2507,7 +2882,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "R3 Raintree \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Ft. Lauderdale, covering all residential floors, parki..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Ft. Lauderdale, covering all residential floors, parki...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&q=80"
+    ]
   },
   {
     "_id": "fb-wynwood",
@@ -2540,7 +2920,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "FB Wynwood \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Miami, covering all residential floors, parking struct..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Miami, covering all residential floors, parking struct...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1451976426598-a7593bd6d0b2?w=600&q=80",
+      "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=600&q=80",
+      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80"
+    ]
   },
   {
     "_id": "edition-21-biscayne-phase-1",
@@ -2575,7 +2960,12 @@
     "publishedOnSite": true,
     "featured": true,
     "seoTitle": "Edition 21 Biscayne Phase 1 \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Full fire protection package for a high-rise ultra-luxury residential tower in Miami, including concealed sprinkler heads throughout branded amenity dec..."
+    "seoDescription": "Full fire protection package for a high-rise ultra-luxury residential tower in Miami, including concealed sprinkler heads throughout branded amenity dec...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80",
+      "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=600&q=80",
+      "https://images.unsplash.com/photo-1542621334-a254cf47733d?w=600&q=80"
+    ]
   },
   {
     "_id": "tpa-slade-at-channelside-fp",
@@ -2608,7 +2998,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "TPA - Slade at Channelside FP | Infire",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a boutique multifamily residential development in Tampa, covering all residential floors, parking structure..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a boutique multifamily residential development in Tampa, covering all residential floors, parking structure...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1504197832061-98bb51c44e22?w=600&q=80"
+    ]
   },
   {
     "_id": "1420-cipriani-miami",
@@ -2641,7 +3036,12 @@
     "publishedOnSite": true,
     "featured": true,
     "seoTitle": "1420 Cipriani Miami \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Miami, covering all residential floors, parking struct..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Miami, covering all residential floors, parking struct...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80"
+    ]
   },
   {
     "_id": "one-brickell-riverfront-lofty-miami",
@@ -2676,7 +3076,12 @@
     "publishedOnSite": true,
     "featured": true,
     "seoTitle": "One Brickell Riverfront (Lofty) Miami | Infire",
-    "seoDescription": "Full fire protection package for a high-rise ultra-luxury residential tower in Miami, including concealed sprinkler heads throughout branded amenity dec..."
+    "seoDescription": "Full fire protection package for a high-rise ultra-luxury residential tower in Miami, including concealed sprinkler heads throughout branded amenity dec...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80",
+      "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=600&q=80",
+      "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&q=80"
+    ]
   },
   {
     "_id": "thomas-bravo-830-brickell",
@@ -2709,7 +3114,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "Thomas Bravo - 830 Brickell \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a boutique multifamily residential development in Miami, covering all residential floors, parking structure..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a boutique multifamily residential development in Miami, covering all residential floors, parking structure...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1503437313881-503a91226402?w=600&q=80"
+    ]
   },
   {
     "_id": "aston-martin-residences",
@@ -2726,7 +3136,7 @@
     "systemsScope": "Dual electric and diesel fire pumps with automatic transfer sequencing | High-rise pressure-zone standpipe system with hose connections at every floor | Concealed wet-pipe heads throughout residential, amenity, and podium levels",
     "narrative": "Aston Martin Residences represents one of South Florida's most complex fire protection engagements in Miami. Infire delivered a fully coordinated NFPA-compliant system \u2014 from hydraulic calculations and riser design to AHJ submittal and field coordination \u2014 keeping the project on schedule and on spec from permit to final certification.",
     "estimatedSprinklers": 24788,
-    "featuredImage": "/images/projects/spm-2200Brickell.jpg",
+    "featuredImage": "/images/projects/aston-martin-residences.jpg",
     "gallery": [
       "https://images.unsplash.com/photo-1479839672679-a46483c0e7c8?auto=format&fit=crop&w=900&q=80",
       "https://images.unsplash.com/photo-1505692952047-1a78307da8f2?auto=format&fit=crop&w=900&q=80",
@@ -2744,7 +3154,12 @@
     "publishedOnSite": true,
     "featured": true,
     "seoTitle": "Aston Martin Residences \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Full fire protection package for a high-rise ultra-luxury residential tower in Miami, including concealed sprinkler heads throughout branded amenity dec..."
+    "seoDescription": "Full fire protection package for a high-rise ultra-luxury residential tower in Miami, including concealed sprinkler heads throughout branded amenity dec...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80",
+      "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=600&q=80",
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80"
+    ]
   },
   {
     "_id": "coral-springs-high-school",
@@ -2776,7 +3191,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "Coral Springs High School \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Campus-wide life-safety modernization for an active educational facility, including wet-pipe sprinkler upgrades across classrooms, auditorium, labs, and..."
+    "seoDescription": "Campus-wide life-safety modernization for an active educational facility, including wet-pipe sprinkler upgrades across classrooms, auditorium, labs, and...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1562774053-701939374585?w=600&q=80",
+      "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&q=80",
+      "https://images.unsplash.com/photo-1560707303-4e980ce876ad?w=600&q=80"
+    ]
   },
   {
     "_id": "oasis-dania-beach-bry",
@@ -2808,7 +3228,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "Oasis : Dania Beach ( Bry \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Dania Beach, covering all residential floors, parking ..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Dania Beach, covering all residential floors, parking ...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&q=80"
+    ]
   },
   {
     "_id": "orl-city-of-port-orange",
@@ -2840,7 +3265,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "ORL - City Of Port Orange \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a boutique multifamily residential development in Port Orange, covering all residential floors, parking str..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a boutique multifamily residential development in Port Orange, covering all residential floors, parking str...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80"
+    ]
   },
   {
     "_id": "orl-mec-rawls-office-building",
@@ -2873,7 +3303,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "ORL - MEC Rawls Office Building | Infire",
-    "seoDescription": "Turnkey NFPA 13 fire protection system for a Class-A office building in Orlando, covering open floor plates, server rooms, and common areas with conceal..."
+    "seoDescription": "Turnkey NFPA 13 fire protection system for a Class-A office building in Orlando, covering open floor plates, server rooms, and common areas with conceal...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1542621334-a254cf47733d?w=600&q=80"
+    ]
   },
   {
     "_id": "coba-residence",
@@ -2905,7 +3340,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "Coba Residence \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a boutique multifamily residential development in Sunny Isles, covering all residential floors, parking str..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a boutique multifamily residential development in Sunny Isles, covering all residential floors, parking str...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1504197832061-98bb51c44e22?w=600&q=80"
+    ]
   },
   {
     "_id": "natiivo-miami",
@@ -2938,7 +3378,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "Natiivo Miami \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Miami, covering all residential floors, parking struct..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Miami, covering all residential floors, parking struct...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80"
+    ]
   },
   {
     "_id": "orl-pam-rehab-hospital",
@@ -2970,7 +3415,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "ORL - PAM Rehab Hospital \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Specialized fire suppression coverage for a rehabilitation and acute care facility in Tavares, coordinating with medical gas zones and NFPA 101 occupanc..."
+    "seoDescription": "Specialized fire suppression coverage for a rehabilitation and acute care facility in Tavares, coordinating with medical gas zones and NFPA 101 occupanc...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=600&q=80",
+      "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=600&q=80",
+      "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&q=80"
+    ]
   },
   {
     "_id": "sunrise-corporate-complex-fp-replacement",
@@ -3002,7 +3452,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "Sunrise Corporate Complex - FP Replacement | Infire",
-    "seoDescription": "NFPA 13 wet-pipe fire protection system for a commercial mixed-use development in Sunrise, with concealed heads in tenant spaces and exposed heads in se..."
+    "seoDescription": "NFPA 13 wet-pipe fire protection system for a commercial mixed-use development in Sunrise, with concealed heads in tenant spaces and exposed heads in se...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1503437313881-503a91226402?w=600&q=80"
+    ]
   },
   {
     "_id": "puttshack",
@@ -3035,7 +3490,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "Puttshack \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a boutique multifamily residential development in Miami, covering all residential floors, parking structure..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a boutique multifamily residential development in Miami, covering all residential floors, parking structure...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80"
+    ]
   },
   {
     "_id": "moxies-ft-lauderdale",
@@ -3052,7 +3512,7 @@
     "systemsScope": "NFPA 13 wet-pipe sprinkler coverage throughout the occupied areas | Upright and concealed heads sized per AHJ and occupancy classification | Coordinated hydraulic calculations and riser documentation",
     "narrative": "Moxie's Ft Lauderdale represents a focused fire protection engagement in Ft. Lauderdale. Infire delivered a fully coordinated NFPA-compliant system \u2014 from hydraulic calculations and riser design to AHJ submittal and field coordination \u2014 keeping the project on schedule and on spec from permit to final certification.",
     "estimatedSprinklers": 205,
-    "featuredImage": "/images/projects/spm-201-East-Las-Olas-856x724-1.jpg",
+    "featuredImage": "/images/projects/spm-400Biscayne_thumb.jpg",
     "gallery": [
       "https://images.unsplash.com/photo-1451976426598-a7593bd6d0b2?auto=format&fit=crop&w=900&q=80",
       "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=900&q=80",
@@ -3068,7 +3528,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "Moxie's Ft Lauderdale \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Complete NFPA 13 wet-pipe sprinkler system for an upscale restaurant and entertainment venue in Ft. Lauderdale, with concealed heads and coordinated cei..."
+    "seoDescription": "Complete NFPA 13 wet-pipe sprinkler system for an upscale restaurant and entertainment venue in Ft. Lauderdale, with concealed heads and coordinated cei...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1560707303-4e980ce876ad?w=600&q=80"
+    ]
   },
   {
     "_id": "pga-station-pod-b",
@@ -3101,7 +3566,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "PGA Station Pod B \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Palm Beach Gardens, covering all residential floors, p..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Palm Beach Gardens, covering all residential floors, p...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&q=80"
+    ]
   },
   {
     "_id": "pompano-station",
@@ -3133,7 +3603,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "Pompano Station \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Pompano Beach, covering all residential floors, parkin..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Pompano Beach, covering all residential floors, parkin...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80"
+    ]
   },
   {
     "_id": "nine-hollywood-apartments",
@@ -3165,7 +3640,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "Nine Hollywood Apartments \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Hollywood, covering all residential floors, parking st..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Hollywood, covering all residential floors, parking st...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1542621334-a254cf47733d?w=600&q=80"
+    ]
   },
   {
     "_id": "paseo-del-rio",
@@ -3198,7 +3678,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "Paseo Del Rio \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Miami, covering all residential floors, parking struct..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Miami, covering all residential floors, parking struct...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1504197832061-98bb51c44e22?w=600&q=80"
+    ]
   },
   {
     "_id": "cloisters-57-plex",
@@ -3231,7 +3716,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "Cloisters - 57 Plex \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a boutique multifamily residential development in Miami, covering all residential floors, parking structure..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a boutique multifamily residential development in Miami, covering all residential floors, parking structure...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80",
+      "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=600&q=80",
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80"
+    ]
   },
   {
     "_id": "atlantic-village-iv",
@@ -3263,7 +3753,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "Atlantic Village IV \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Hallandale Beach, covering all residential floors, par..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Hallandale Beach, covering all residential floors, par...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&q=80"
+    ]
   },
   {
     "_id": "sunset-harbour-north-condo",
@@ -3296,7 +3791,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "Sunset Harbour North Condo \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a boutique multifamily residential development in Miami Beach, covering all residential floors, parking str..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a boutique multifamily residential development in Miami Beach, covering all residential floors, parking str...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1503437313881-503a91226402?w=600&q=80"
+    ]
   },
   {
     "_id": "beacon-centre-5",
@@ -3329,7 +3829,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "Beacon Centre 5 \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a boutique multifamily residential development in Miami, covering all residential floors, parking structure..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a boutique multifamily residential development in Miami, covering all residential floors, parking structure...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80"
+    ]
   },
   {
     "_id": "solimar-apts-florida-city",
@@ -3361,7 +3866,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "Solimar Apts Florida City \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a boutique multifamily residential development in Florida City, covering all residential floors, parking st..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a boutique multifamily residential development in Florida City, covering all residential floors, parking st...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1560707303-4e980ce876ad?w=600&q=80"
+    ]
   },
   {
     "_id": "jax-embassy-suites-exp",
@@ -3393,7 +3903,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "JAX - Embassy Suites Exp \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a boutique multifamily residential development in St. Augustine, covering all residential floors, parking s..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a boutique multifamily residential development in St. Augustine, covering all residential floors, parking s...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&q=80"
+    ]
   },
   {
     "_id": "brisas-del-este-apts",
@@ -3426,7 +3941,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "Brisas Del Este Apts \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Miami, covering all residential floors, parking struct..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Miami, covering all residential floors, parking struct...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80"
+    ]
   },
   {
     "_id": "old-palm-golf-club-reno",
@@ -3459,7 +3979,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "Old Palm Golf Club Reno \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a boutique multifamily residential development in Palm Beach Gardens, covering all residential floors, park..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a boutique multifamily residential development in Palm Beach Gardens, covering all residential floors, park...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1542621334-a254cf47733d?w=600&q=80"
+    ]
   },
   {
     "_id": "estates-at-acqualina-south-tower",
@@ -3492,7 +4017,12 @@
     "publishedOnSite": true,
     "featured": true,
     "seoTitle": "Estates at Acqualina - South Tower | Infire",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Sunny Isles, covering all residential floors, parking ..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a large-scale multifamily residential development in Sunny Isles, covering all residential floors, parking ...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1504197832061-98bb51c44e22?w=600&q=80"
+    ]
   },
   {
     "_id": "santander-brickell-fpc",
@@ -3525,7 +4055,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "Santander, Brickell - FPC \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a boutique multifamily residential development in Miami, covering all residential floors, parking structure..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a boutique multifamily residential development in Miami, covering all residential floors, parking structure...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80"
+    ]
   },
   {
     "_id": "century-link-miami",
@@ -3558,7 +4093,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "Century Link - Miami \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Pre-action and clean-agent fire suppression package for a mission-critical telecom facility in Miami, protecting active switching equipment and cable in..."
+    "seoDescription": "Pre-action and clean-agent fire suppression package for a mission-critical telecom facility in Miami, protecting active switching equipment and cable in...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80",
+      "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&q=80",
+      "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&q=80"
+    ]
   },
   {
     "_id": "brisas-del-este-miami",
@@ -3591,7 +4131,12 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "Brisas Del Este - Miami \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a boutique multifamily residential development in Miami, covering all residential floors, parking structure..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a boutique multifamily residential development in Miami, covering all residential floors, parking structure...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1503437313881-503a91226402?w=600&q=80"
+    ]
   },
   {
     "_id": "625-olive-micro-apts-wp",
@@ -3624,6 +4169,11 @@
     "publishedOnSite": true,
     "featured": false,
     "seoTitle": "625 Olive Micro Apts - WP \u2014 Fire Protection | Infire Inc.",
-    "seoDescription": "Complete NFPA 13 fire suppression system for a boutique multifamily residential development in West Palm Beach, covering all residential floors, parking..."
+    "seoDescription": "Complete NFPA 13 fire suppression system for a boutique multifamily residential development in West Palm Beach, covering all residential floors, parking...",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600&q=80",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80",
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80"
+    ]
   }
 ]
