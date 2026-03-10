@@ -11,12 +11,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body>
         <nav className="site-nav">
-          <a href="/" className="nav-brand">
+          <a href="/" className="nav-brand" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
             <img
               src="/images/infire-logo.png"
-              alt="Infire Inc."
-              style={{ height: '38px', width: 'auto', display: 'block' }}
+              alt="Infire"
+              style={{ height: '36px', width: 'auto', display: 'block' }}
             />
+            <span className="nav-name" style={{ fontWeight: 800, fontSize: '1.05rem', letterSpacing: '0.06em', color: '#f3793d' }}>INFIRE</span>
           </a>
           <div className="nav-links">
             <a href="/portfolio" className="nav-link">Portfolio</a>
@@ -27,8 +28,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </nav>
         <main>{children}</main>
         <footer className="site-footer">
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.75rem', marginBottom: '0.75rem' }}>
-            <img src="/images/infire-logo.png" alt="Infire Inc." style={{ height: '32px', width: 'auto', opacity: 0.7 }} />
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.6rem', marginBottom: '0.75rem' }}>
+            <img src="/images/infire-logo.png" alt="Infire" style={{ height: '28px', width: 'auto', opacity: 0.7 }} />
+            <span style={{ fontWeight: 800, fontSize: '0.95rem', letterSpacing: '0.06em', color: '#f3793d', opacity: 0.8 }}>INFIRE</span>
           </div>
           <p><strong>Infire Inc.</strong> — Fire Protection Engineering</p>
           <p>Miami, FL · infireinc.net · Licensed &amp; Insured</p>
