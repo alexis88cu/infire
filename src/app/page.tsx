@@ -45,8 +45,20 @@ export default function HomePage() {
         <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fill, minmax(340px, 1fr))',gap:'1.5rem'}}>
           {featured.map(p=>(
             <a key={p.slug} href={`/portfolio/${p.slug}`} className="card">
-              <div style={{height:'200px',background:'linear-gradient(135deg,#1a2332 0%,#0d1520 100%)',display:'flex',alignItems:'center',justifyContent:'center',position:'relative'}}>
-                <span style={{fontSize:'3rem'}}>🔥</span>
+              <div style={{height:'220px',position:'relative',overflow:'hidden',background:'#111827'}}>
+                {p.featuredImage ? (
+                  <img
+                    src={p.featuredImage}
+                    alt={p.projectName}
+                    style={{width:'100%',height:'100%',objectFit:'cover',display:'block',transition:'transform 0.4s ease'}}
+                    
+                  />
+                ) : (
+                  <div style={{width:'100%',height:'100%',background:'linear-gradient(135deg,#1a2332,#111827)',display:'flex',alignItems:'center',justifyContent:'center'}}>
+                    <span style={{fontSize:'2.5rem',opacity:0.2}}>🏗</span>
+                  </div>
+                )}
+                <div style={{position:'absolute',inset:0,background:'linear-gradient(to top,rgba(13,17,23,0.6) 0%,transparent 50%)'}}/>
                 <div style={{position:'absolute',top:'12px',right:'12px'}}><span className="badge badge-orange">{p.sector}</span></div>
               </div>
               <div style={{padding:'1.25rem'}}>
