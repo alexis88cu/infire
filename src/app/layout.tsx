@@ -12,8 +12,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <nav className="site-nav">
           <a href="/" className="nav-brand">
-            <span className="nav-logo">IN</span>
-            <span className="nav-name">INFIRE INC.</span>
+            <img
+              src="/images/infire-logo.png"
+              alt="Infire Inc."
+              style={{ height: '38px', width: 'auto', display: 'block' }}
+            />
           </a>
           <div className="nav-links">
             <a href="/portfolio" className="nav-link">Portfolio</a>
@@ -24,6 +27,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </nav>
         <main>{children}</main>
         <footer className="site-footer">
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.75rem', marginBottom: '0.75rem' }}>
+            <img src="/images/infire-logo.png" alt="Infire Inc." style={{ height: '32px', width: 'auto', opacity: 0.7 }} />
+          </div>
           <p><strong>Infire Inc.</strong> — Fire Protection Engineering</p>
           <p>Miami, FL · infireinc.net · Licensed &amp; Insured</p>
           <p className="footer-copy">© {new Date().getFullYear()} Infire Inc. All rights reserved.</p>
