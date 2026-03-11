@@ -11,13 +11,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body>
         <nav className="site-nav">
-          <a href="/" className="nav-brand" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+          <a href="/" className="nav-brand" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
             <img
               src="/images/infire-logo.png"
               alt="Infire"
-              style={{ height: '36px', width: 'auto', display: 'block' }}
+              style={{ height: '44px', width: 'auto', display: 'block' }}
             />
-            <span className="nav-name" style={{ fontWeight: 800, fontSize: '1.05rem', letterSpacing: '0.06em', color: '#f3793d' }}>INFIRE</span>
+            <span className="nav-name" style={{ fontWeight: 900, fontSize: '1.15rem', letterSpacing: '0.08em', color: '#f3793d', textTransform: 'uppercase' }}>Infire</span>
           </a>
           <div className="nav-links">
             <a href="/portfolio" className="nav-link">Portfolio</a>
@@ -28,9 +28,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </nav>
         <main>{children}</main>
         <footer className="site-footer">
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.6rem', marginBottom: '0.75rem' }}>
-            <img src="/images/infire-logo.png" alt="Infire" style={{ height: '28px', width: 'auto', opacity: 0.7 }} />
-            <span style={{ fontWeight: 800, fontSize: '0.95rem', letterSpacing: '0.06em', color: '#f3793d', opacity: 0.8 }}>INFIRE</span>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.75rem', marginBottom: '0.75rem' }}>
+            <img src="/images/infire-logo.png" alt="Infire" style={{ height: '38px', width: 'auto', opacity: 0.75 }} />
+            <span style={{ fontWeight: 900, fontSize: '1rem', letterSpacing: '0.08em', color: '#f3793d', opacity: 0.85, textTransform: 'uppercase' }}>Infire</span>
           </div>
           <p><strong>Infire Inc.</strong> — Fire Protection Engineering</p>
           <p>Miami, FL · infireinc.net · Licensed &amp; Insured</p>

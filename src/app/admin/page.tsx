@@ -70,7 +70,7 @@ export default function AdminPage() {
           onKeyDown={e => e.key === 'Enter' && pw === ADMIN_PASS && setAuthed(true)}
           style={{ ...inp, marginBottom: '1rem' }}
         />
-        <button onClick={() => pw === ADMIN_PASS ? setAuthed(true) : alert('Contraseña incorrecta')}
+        <button onClick={() => pw === ADMIN_PASS ? setAuthed(true) : alert('Incorrect password')}
           style={{ width: '100%', padding: '0.85rem', background: 'var(--orange)', color: '#fff', border: 'none', borderRadius: '8px', fontWeight: 700, cursor: 'pointer', fontFamily: 'inherit', fontSize: '0.9rem' }}>
           Entrar
         </button>
@@ -85,12 +85,12 @@ export default function AdminPage() {
           <div style={{ color: 'var(--orange)', fontSize: '0.72rem', letterSpacing: '0.1em', textTransform: 'uppercase', fontWeight: 700, marginBottom: '0.3rem' }}>Panel de Administración</div>
           <h1 style={{ fontSize: '1.8rem', fontWeight: 900 }}>Editar Proyectos</h1>
         </div>
-        <a href="/" style={{ color: 'var(--gray)', fontSize: '0.85rem', textDecoration: 'none' }}>← Volver al sitio</a>
+        <a href="/" style={{ color: 'var(--gray)', fontSize: '0.85rem', textDecoration: 'none' }}>← Back to site</a>
       </div>
 
       {/* Search */}
       <input
-        type="text" placeholder="Buscar proyecto por nombre, ciudad o slug..."
+        type="text" placeholder="Search by project name, city or slug..."
         value={search} onChange={e => setSearch(e.target.value)}
         style={{ ...inp, marginBottom: '1.5rem', maxWidth: '400px' }}
       />
@@ -99,7 +99,7 @@ export default function AdminPage() {
         
         {/* Project list */}
         <div>
-          <div style={{ fontSize: '0.78rem', color: 'var(--gray)', marginBottom: '0.75rem' }}>{filtered.length} proyectos</div>
+          <div style={{ fontSize: '0.78rem', color: 'var(--gray)', marginBottom: '0.75rem' }}>{filtered.length} projects</div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', maxHeight: 'calc(100vh - 280px)', overflowY: 'auto', paddingRight: '0.5rem' }}>
             {filtered.map(p => (
               <div key={p.slug}
@@ -135,12 +135,12 @@ export default function AdminPage() {
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
               <div>
-                <label style={lbl}>Descripción corta (card)</label>
+                <label style={lbl}>Short description (card)</label>
                 <textarea
                   value={editing.description || ''}
                   onChange={e => setEditing({ ...editing, description: e.target.value })}
                   rows={3}
-                  placeholder="Descripción que aparece en la card del portfolio..."
+                  placeholder="Description shown on the portfolio card..."
                   style={{ ...inp, resize: 'vertical', lineHeight: 1.55 }}
                 />
                 <div style={{ fontSize: '0.7rem', color: '#636e7b', marginTop: '0.25rem' }}>{(editing.description || '').length} caracteres · Recomendado: 80–150</div>
@@ -152,7 +152,7 @@ export default function AdminPage() {
                   value={editing.narrative || ''}
                   onChange={e => setEditing({ ...editing, narrative: e.target.value })}
                   rows={6}
-                  placeholder="Descripción completa del proyecto para la página de detalle..."
+                  placeholder="Full project description for the detail page..."
                   style={{ ...inp, resize: 'vertical', lineHeight: 1.6 }}
                 />
                 <div style={{ fontSize: '0.7rem', color: '#636e7b', marginTop: '0.25rem' }}>{(editing.narrative || '').length} caracteres</div>
@@ -176,7 +176,7 @@ export default function AdminPage() {
 
               <div style={{ display: 'flex', gap: '0.75rem' }}>
                 <button onClick={handleSave} disabled={saving} style={{ flex: 1, padding: '0.85rem', background: saved ? '#6fcf97' : 'var(--orange)', color: '#fff', border: 'none', borderRadius: '8px', fontWeight: 700, cursor: saving ? 'not-allowed' : 'pointer', fontSize: '0.9rem', fontFamily: 'inherit', transition: 'background .3s' }}>
-                  {saving ? 'Guardando...' : saved ? '✓ Guardado' : 'Guardar cambios'}
+                  {saving ? 'Saving...' : saved ? '✓ Saved' : 'Save changes'}
                 </button>
                 <a href={`/portfolio/${editing.slug}`} target="_blank" style={{ padding: '0.85rem 1rem', border: '1px solid var(--border)', color: 'var(--gray)', borderRadius: '8px', fontWeight: 600, fontSize: '0.82rem', textDecoration: 'none', display: 'flex', alignItems: 'center' }}>Ver →</a>
               </div>
