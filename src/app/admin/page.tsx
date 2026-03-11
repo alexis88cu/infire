@@ -1,275 +1,189 @@
 'use client';
-
 import { useState, useEffect } from 'react';
 
-const ADMIN_PASSWORD = 'infire2026';
+// Password protection
+const ADMIN_PASS = 'infire2026';
 
-interface Project {
+type Project = {
   slug: string;
   projectName: string;
-  address?: string;
-  city?: string;
-  sector?: string;
+  city: string;
+  sector: string;
   description?: string;
   narrative?: string;
   featuredImage?: string;
-  [key: string]: any;
-}
+};
 
 export default function AdminPage() {
-  const [auth, setAuth] = useState(false);
+  const [authed, setAuthed] = useState(false);
   const [pw, setPw] = useState('');
   const [projects, setProjects] = useState<Project[]>([]);
   const [search, setSearch] = useState('');
   const [editing, setEditing] = useState<Project | null>(null);
-  const [saved, setSaved] = useState<string | null>(null);
-  const [loading, setLoading] = useState(false);
+  const [saved, setSaved] = useState(false);
+  const [saving, setSaving] = useState(false);
 
   useEffect(() => {
-    if (auth) {
+    if (authed) {
       fetch('/api/admin/projects')
         .then(r => r.json())
         .then(data => setProjects(data))
-        .catch(() => setProjects([]));
+        .catch(() => {});
     }
-  }, [auth]);
+  }, [authed]);
 
   const filtered = projects.filter(p => {
     const q = search.toLowerCase();
-    return !q ||
-      (p.projectName || '').toLowerCase().includes(q) ||
-      (p.city || '').toLowerCase().includes(q) ||
-      (p.slug || '').toLowerCase().includes(q);
+    return !q || p.projectName?.toLowerCase().includes(q) || p.city?.toLowerCase().includes(q) || p.slug?.toLowerCase().includes(q);
   });
 
   const handleSave = async () => {
     if (!editing) return;
-    setLoading(true);
+    setSaving(true);
     try {
       const res = await fetch('/api/admin/projects', {
-        method: 'PATCH',
+        method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ slug: editing.slug, updates: {
-          description: editing.description,
-          narrative: editing.narrative,
-          featuredImage: editing.featuredImage,
-        }}),
+        body: JSON.stringify({ slug: editing.slug, description: editing.description, narrative: editing.narrative, featuredImage: editing.featuredImage }),
       });
       if (res.ok) {
         setProjects(prev => prev.map(p => p.slug === editing.slug ? { ...p, ...editing } : p));
-        setSaved(editing.slug);
-        setTimeout(() => setSaved(null), 3000);
+        setSaved(true);
+        setTimeout(() => setSaved(false), 2000);
       }
-    } finally {
-      setLoading(false);
-    }
+    } finally { setSaving(false); }
   };
 
-  const inp: React.CSSProperties = {
-    width: '100%', background: 'rgba(255,255,255,0.05)',
-    border: '1px solid var(--border)', borderRadius: '8px',
-    padding: '0.7rem 0.9rem', color: '#e6edf3',
-    fontSize: '0.88rem', outline: 'none', boxSizing: 'border-box', fontFamily: 'inherit',
-  };
+  const inp: React.CSSProperties = { width: '100%', background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.12)', borderRadius: '8px', padding: '0.7rem 0.9rem', color: '#e6edf3', fontSize: '0.88rem', outline: 'none', boxSizing: 'border-box', fontFamily: 'inherit' };
+  const lbl: React.CSSProperties = { display: 'block', fontWeight: 700, fontSize: '0.72rem', letterSpacing: '0.08em', textTransform: 'uppercase' as const, color: '#8a94a6', marginBottom: '0.35rem' };
 
-  // ── AUTH SCREEN ───────────────────────────────────────────────
-  if (!auth) return (
-    <div style={{ maxWidth: '360px', margin: '8rem auto', padding: '2rem', background: 'var(--dark2)', border: '1px solid var(--border)', borderRadius: '16px', textAlign: 'center' }}>
-      <div style={{ fontSize: '2rem', marginBottom: '1rem' }}>🔒</div>
-      <h1 style={{ fontSize: '1.3rem', fontWeight: 800, marginBottom: '0.5rem' }}>Admin Panel</h1>
-      <p style={{ color: 'var(--gray)', fontSize: '0.83rem', marginBottom: '1.5rem' }}>Infire Inc. — Solo uso interno</p>
-      <input
-        type="password"
-        placeholder="Contraseña…"
-        value={pw}
-        onChange={e => setPw(e.target.value)}
-        onKeyDown={e => e.key === 'Enter' && pw === ADMIN_PASSWORD && setAuth(true)}
-        style={{ ...inp, marginBottom: '0.75rem', textAlign: 'center' }}
-      />
-      <button
-        onClick={() => pw === ADMIN_PASSWORD ? setAuth(true) : alert('Contraseña incorrecta')}
-        style={{ width: '100%', background: 'var(--orange)', border: 'none', borderRadius: '8px', padding: '0.8rem', color: '#fff', fontWeight: 800, cursor: 'pointer', fontSize: '0.9rem' }}
-      >
-        Entrar →
-      </button>
-    </div>
-  );
-
-  // ── EDITOR MODAL ─────────────────────────────────────────────
-  if (editing) return (
-    <div style={{ maxWidth: '760px', margin: '0 auto', padding: '3rem 2rem' }}>
-      <button
-        onClick={() => setEditing(null)}
-        style={{ background: 'transparent', border: 'none', color: 'var(--gray)', cursor: 'pointer', fontSize: '0.85rem', marginBottom: '1.5rem', padding: 0 }}
-      >
-        ← Volver al listado
-      </button>
-
-      <div style={{ background: 'var(--dark2)', border: '1px solid var(--border)', borderRadius: '16px', padding: '2rem' }}>
-        <h2 style={{ fontSize: '1.25rem', fontWeight: 800, marginBottom: '0.25rem' }}>{editing.projectName}</h2>
-        <p style={{ color: 'var(--gray)', fontSize: '0.82rem', marginBottom: '2rem' }}>
-          {editing.address} · {editing.city} · {editing.sector}
-        </p>
-
-        {/* Current image preview */}
-        {editing.featuredImage && (
-          <div style={{ marginBottom: '1.5rem' }}>
-            <img
-              src={editing.featuredImage}
-              alt=""
-              style={{ width: '100%', height: '200px', objectFit: 'cover', borderRadius: '10px', border: '1px solid var(--border)' }}
-            />
-          </div>
-        )}
-
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
-          <div>
-            <label style={{ display: 'block', fontWeight: 700, fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.06em', color: '#adb5bd', marginBottom: '0.4rem' }}>
-              URL de Imagen Principal
-            </label>
-            <input
-              type="text"
-              value={editing.featuredImage || ''}
-              onChange={e => setEditing({ ...editing, featuredImage: e.target.value })}
-              placeholder="/images/projects/mi-foto.jpg o URL completa"
-              style={inp}
-            />
-            <p style={{ color: 'var(--gray)', fontSize: '0.73rem', marginTop: '0.3rem' }}>
-              Puedes usar una URL de Unsplash, Wix o una ruta local /images/projects/...
-            </p>
-          </div>
-
-          <div>
-            <label style={{ display: 'block', fontWeight: 700, fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.06em', color: '#adb5bd', marginBottom: '0.4rem' }}>
-              Descripción corta (card)
-            </label>
-            <textarea
-              value={editing.description || ''}
-              onChange={e => setEditing({ ...editing, description: e.target.value })}
-              rows={3}
-              placeholder="Descripción breve para la card del portfolio..."
-              style={{ ...inp, resize: 'vertical', lineHeight: 1.6 }}
-            />
-          </div>
-
-          <div>
-            <label style={{ display: 'block', fontWeight: 700, fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.06em', color: '#adb5bd', marginBottom: '0.4rem' }}>
-              Narrativa completa (página de detalle)
-            </label>
-            <textarea
-              value={editing.narrative || ''}
-              onChange={e => setEditing({ ...editing, narrative: e.target.value })}
-              rows={8}
-              placeholder="Descripción completa del proyecto, scope, sistemas instalados, desafíos técnicos..."
-              style={{ ...inp, resize: 'vertical', lineHeight: 1.7 }}
-            />
-          </div>
-        </div>
-
-        <div style={{ display: 'flex', gap: '0.75rem', marginTop: '1.75rem' }}>
-          <button
-            onClick={handleSave}
-            disabled={loading}
-            style={{
-              flex: 1, background: loading ? 'rgba(243,121,61,0.5)' : 'var(--orange)',
-              border: 'none', borderRadius: '8px', padding: '0.85rem',
-              color: '#fff', fontWeight: 800, cursor: loading ? 'not-allowed' : 'pointer', fontSize: '0.9rem',
-            }}
-          >
-            {loading ? 'Guardando…' : '💾 Guardar cambios'}
-          </button>
-          <button
-            onClick={() => setEditing(null)}
-            style={{ background: 'transparent', border: '1px solid var(--border)', borderRadius: '8px', padding: '0.85rem 1.25rem', color: 'var(--gray)', cursor: 'pointer', fontWeight: 600 }}
-          >
-            Cancelar
-          </button>
-        </div>
-
-        {saved === editing.slug && (
-          <div style={{ marginTop: '1rem', background: 'rgba(111,207,151,0.1)', border: '1px solid rgba(111,207,151,0.3)', borderRadius: '8px', padding: '0.75rem', color: '#6fcf97', fontSize: '0.85rem', textAlign: 'center' }}>
-            ✓ Cambios guardados correctamente
-          </div>
-        )}
-      </div>
-    </div>
-  );
-
-  // ── PROJECT LIST ─────────────────────────────────────────────
-  return (
-    <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '3rem 2rem' }}>
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '2rem', flexWrap: 'wrap', gap: '1rem' }}>
-        <div>
-          <div style={{ color: 'var(--orange)', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '0.3rem' }}>Admin Panel</div>
-          <h1 style={{ fontSize: '1.8rem', fontWeight: 900 }}>Gestión de Proyectos</h1>
-          <p style={{ color: 'var(--gray)', fontSize: '0.85rem', marginTop: '0.25rem' }}>{projects.length} proyectos · Edita descripciones e imágenes</p>
-        </div>
-        <button
-          onClick={() => setAuth(false)}
-          style={{ background: 'transparent', border: '1px solid var(--border)', borderRadius: '8px', padding: '0.5rem 1rem', color: 'var(--gray)', cursor: 'pointer', fontSize: '0.82rem' }}
-        >
-          Salir
+  // Login screen
+  if (!authed) return (
+    <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '2rem' }}>
+      <div style={{ background: 'var(--dark2)', border: '1px solid var(--border)', borderRadius: '16px', padding: '2.5rem', maxWidth: '360px', width: '100%' }}>
+        <div style={{ color: 'var(--orange)', fontSize: '0.76rem', letterSpacing: '0.1em', textTransform: 'uppercase', fontWeight: 700, marginBottom: '0.75rem' }}>Panel de Administración</div>
+        <h1 style={{ fontSize: '1.4rem', fontWeight: 900, marginBottom: '1.5rem' }}>Infire Admin</h1>
+        <label style={lbl}>Contraseña</label>
+        <input
+          type="password" placeholder="••••••••" value={pw}
+          onChange={e => setPw(e.target.value)}
+          onKeyDown={e => e.key === 'Enter' && pw === ADMIN_PASS && setAuthed(true)}
+          style={{ ...inp, marginBottom: '1rem' }}
+        />
+        <button onClick={() => pw === ADMIN_PASS ? setAuthed(true) : alert('Contraseña incorrecta')}
+          style={{ width: '100%', padding: '0.85rem', background: 'var(--orange)', color: '#fff', border: 'none', borderRadius: '8px', fontWeight: 700, cursor: 'pointer', fontFamily: 'inherit', fontSize: '0.9rem' }}>
+          Entrar
         </button>
       </div>
+    </div>
+  );
 
-      <input
-        type="text"
-        placeholder="Buscar proyecto o ciudad…"
-        value={search}
-        onChange={e => setSearch(e.target.value)}
-        style={{ ...inp, maxWidth: '400px', marginBottom: '1.5rem' }}
-      />
-
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
-        {filtered.map(p => (
-          <div
-            key={p.slug}
-            style={{
-              display: 'flex', alignItems: 'center', gap: '1rem',
-              background: 'var(--dark2)', border: '1px solid var(--border)',
-              borderRadius: '10px', padding: '0.9rem 1.1rem',
-              cursor: 'pointer', transition: 'border-color 0.15s',
-            }}
-            onClick={() => setEditing({ ...p })}
-            onMouseEnter={e => (e.currentTarget.style.borderColor = 'rgba(243,121,61,0.4)')}
-            onMouseLeave={e => (e.currentTarget.style.borderColor = 'var(--border)')}
-          >
-            {/* Thumbnail */}
-            <div style={{ width: '56px', height: '40px', borderRadius: '6px', overflow: 'hidden', flexShrink: 0, background: '#111827' }}>
-              {p.featuredImage && (
-                <img src={p.featuredImage} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-              )}
-            </div>
-
-            {/* Info */}
-            <div style={{ flex: 1, minWidth: 0 }}>
-              <div style={{ fontWeight: 700, fontSize: '0.9rem', color: '#e6edf3', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
-                {p.projectName}
-              </div>
-              <div style={{ fontSize: '0.75rem', color: 'var(--gray)', marginTop: '1px' }}>
-                {p.address} · {p.city} · <span style={{ color: 'rgba(243,121,61,0.7)' }}>{p.sector}</span>
-              </div>
-            </div>
-
-            {/* Description status */}
-            <div style={{ flexShrink: 0, textAlign: 'right' }}>
-              <span style={{
-                fontSize: '0.7rem', fontWeight: 700, padding: '2px 8px', borderRadius: '4px',
-                background: p.description ? 'rgba(111,207,151,0.1)' : 'rgba(220,53,69,0.1)',
-                color: p.description ? '#6fcf97' : '#f08080', border: `1px solid ${p.description ? 'rgba(111,207,151,0.2)' : 'rgba(220,53,69,0.2)'}`,
-              }}>
-                {p.description ? '✓ Con descripción' : '⚠ Sin descripción'}
-              </span>
-            </div>
-
-            <div style={{ color: 'var(--gray)', fontSize: '0.8rem', flexShrink: 0 }}>✏️</div>
-          </div>
-        ))}
+  return (
+    <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '3rem 2rem' }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '2rem' }}>
+        <div>
+          <div style={{ color: 'var(--orange)', fontSize: '0.72rem', letterSpacing: '0.1em', textTransform: 'uppercase', fontWeight: 700, marginBottom: '0.3rem' }}>Panel de Administración</div>
+          <h1 style={{ fontSize: '1.8rem', fontWeight: 900 }}>Editar Proyectos</h1>
+        </div>
+        <a href="/" style={{ color: 'var(--gray)', fontSize: '0.85rem', textDecoration: 'none' }}>← Volver al sitio</a>
       </div>
 
-      <p style={{ textAlign: 'center', color: 'var(--gray)', fontSize: '0.8rem', marginTop: '2rem' }}>
-        {filtered.length} de {projects.length} proyectos · Click en cualquier fila para editar
-      </p>
+      {/* Search */}
+      <input
+        type="text" placeholder="Buscar proyecto por nombre, ciudad o slug..."
+        value={search} onChange={e => setSearch(e.target.value)}
+        style={{ ...inp, marginBottom: '1.5rem', maxWidth: '400px' }}
+      />
+
+      <div style={{ display: 'grid', gridTemplateColumns: editing ? '1fr 1fr' : '1fr', gap: '1.5rem' }}>
+        
+        {/* Project list */}
+        <div>
+          <div style={{ fontSize: '0.78rem', color: 'var(--gray)', marginBottom: '0.75rem' }}>{filtered.length} proyectos</div>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', maxHeight: 'calc(100vh - 280px)', overflowY: 'auto', paddingRight: '0.5rem' }}>
+            {filtered.map(p => (
+              <div key={p.slug}
+                onClick={() => { setEditing({ ...p }); setSaved(false); }}
+                style={{
+                  background: editing?.slug === p.slug ? 'rgba(243,121,61,0.1)' : 'var(--dark2)',
+                  border: `1px solid ${editing?.slug === p.slug ? 'rgba(243,121,61,0.4)' : 'var(--border)'}`,
+                  borderRadius: '10px', padding: '0.85rem 1rem',
+                  cursor: 'pointer', transition: 'all .15s',
+                }}
+                onMouseEnter={e => { if (editing?.slug !== p.slug) (e.currentTarget as HTMLElement).style.borderColor = 'rgba(255,255,255,0.2)'; }}
+                onMouseLeave={e => { if (editing?.slug !== p.slug) (e.currentTarget as HTMLElement).style.borderColor = 'var(--border)'; }}
+              >
+                <div style={{ fontWeight: 700, fontSize: '0.88rem', marginBottom: '0.2rem', color: '#e6edf3' }}>{p.projectName}</div>
+                <div style={{ fontSize: '0.75rem', color: 'var(--gray)' }}>{p.city} · {p.sector}</div>
+                {p.description && <div style={{ fontSize: '0.72rem', color: '#636e7b', marginTop: '0.3rem', overflow: 'hidden', whiteSpace: 'nowrap', textOverflow: 'ellipsis' }}>{p.description?.slice(0, 80)}...</div>}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Edit panel */}
+        {editing && (
+          <div style={{ background: 'var(--dark2)', border: '1px solid var(--border)', borderRadius: '14px', padding: '1.5rem', position: 'sticky', top: '2rem', maxHeight: 'calc(100vh - 200px)', overflowY: 'auto' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '1.5rem' }}>
+              <div>
+                <div style={{ color: 'var(--orange)', fontSize: '0.7rem', letterSpacing: '0.08em', textTransform: 'uppercase', fontWeight: 700, marginBottom: '0.3rem' }}>Editando</div>
+                <h2 style={{ fontSize: '1.1rem', fontWeight: 800 }}>{editing.projectName}</h2>
+                <div style={{ fontSize: '0.75rem', color: 'var(--gray)', marginTop: '0.2rem' }}>{editing.city} · {editing.slug}</div>
+              </div>
+              <button onClick={() => setEditing(null)} style={{ background: 'none', border: '1px solid var(--border)', color: 'var(--gray)', borderRadius: '6px', padding: '4px 10px', cursor: 'pointer', fontSize: '0.8rem' }}>✕</button>
+            </div>
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+              <div>
+                <label style={lbl}>Descripción corta (card)</label>
+                <textarea
+                  value={editing.description || ''}
+                  onChange={e => setEditing({ ...editing, description: e.target.value })}
+                  rows={3}
+                  placeholder="Descripción que aparece en la card del portfolio..."
+                  style={{ ...inp, resize: 'vertical', lineHeight: 1.55 }}
+                />
+                <div style={{ fontSize: '0.7rem', color: '#636e7b', marginTop: '0.25rem' }}>{(editing.description || '').length} caracteres · Recomendado: 80–150</div>
+              </div>
+
+              <div>
+                <label style={lbl}>Narrativa (página de detalle)</label>
+                <textarea
+                  value={editing.narrative || ''}
+                  onChange={e => setEditing({ ...editing, narrative: e.target.value })}
+                  rows={6}
+                  placeholder="Descripción completa del proyecto para la página de detalle..."
+                  style={{ ...inp, resize: 'vertical', lineHeight: 1.6 }}
+                />
+                <div style={{ fontSize: '0.7rem', color: '#636e7b', marginTop: '0.25rem' }}>{(editing.narrative || '').length} caracteres</div>
+              </div>
+
+              <div>
+                <label style={lbl}>Imagen principal (URL o /images/...)</label>
+                <input
+                  type="text"
+                  value={editing.featuredImage || ''}
+                  onChange={e => setEditing({ ...editing, featuredImage: e.target.value })}
+                  placeholder="/images/projects/real-xxx.jpg"
+                  style={inp}
+                />
+                {editing.featuredImage && (
+                  <div style={{ marginTop: '0.5rem', borderRadius: '8px', overflow: 'hidden', height: '120px' }}>
+                    <img src={editing.featuredImage} alt="preview" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  </div>
+                )}
+              </div>
+
+              <div style={{ display: 'flex', gap: '0.75rem' }}>
+                <button onClick={handleSave} disabled={saving} style={{ flex: 1, padding: '0.85rem', background: saved ? '#6fcf97' : 'var(--orange)', color: '#fff', border: 'none', borderRadius: '8px', fontWeight: 700, cursor: saving ? 'not-allowed' : 'pointer', fontSize: '0.9rem', fontFamily: 'inherit', transition: 'background .3s' }}>
+                  {saving ? 'Guardando...' : saved ? '✓ Guardado' : 'Guardar cambios'}
+                </button>
+                <a href={`/portfolio/${editing.slug}`} target="_blank" style={{ padding: '0.85rem 1rem', border: '1px solid var(--border)', color: 'var(--gray)', borderRadius: '8px', fontWeight: 600, fontSize: '0.82rem', textDecoration: 'none', display: 'flex', alignItems: 'center' }}>Ver →</a>
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
     </div>
   );
 }

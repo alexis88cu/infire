@@ -4,45 +4,42 @@ import { join } from 'path';
 
 const DATA_PATH = join(process.cwd(), 'src/lib/projects.json');
 
-function loadProjects() {
-  return JSON.parse(readFileSync(DATA_PATH, 'utf-8'));
-}
-
-// GET — return all projects
 export async function GET() {
   try {
-    const projects = loadProjects();
-    return NextResponse.json(projects);
+    const data = JSON.parse(readFileSync(DATA_PATH, 'utf8'));
+    // Return only fields needed for admin
+    const lite = data.map((p: any) => ({
+      slug: p.slug,
+      projectName: p.projectName,
+      city: p.city,
+      sector: p.sector,
+      description: p.description,
+      narrative: p.narrative,
+      featuredImage: p.featuredImage,
+    }));
+    return NextResponse.json(lite);
   } catch {
-    return NextResponse.json({ error: 'Failed to load' }, { status: 500 });
+    return NextResponse.json({ error: 'Failed to read projects' }, { status: 500 });
   }
 }
 
-// PATCH — update a single project's editable fields
-export async function PATCH(req: NextRequest) {
+export async function POST(req: NextRequest) {
   try {
-    const { slug, updates } = await req.json();
-    if (!slug || !updates) {
-      return NextResponse.json({ error: 'slug and updates required' }, { status: 400 });
-    }
+    const body = await req.json();
+    const { slug, description, narrative, featuredImage } = body;
+    if (!slug) return NextResponse.json({ error: 'slug required' }, { status: 400 });
 
-    const projects = loadProjects();
-    const idx = projects.findIndex((p: any) => p.slug === slug);
-    if (idx === -1) {
-      return NextResponse.json({ error: 'Project not found' }, { status: 404 });
-    }
+    const data = JSON.parse(readFileSync(DATA_PATH, 'utf8'));
+    const idx = data.findIndex((p: any) => p.slug === slug);
+    if (idx === -1) return NextResponse.json({ error: 'Project not found' }, { status: 404 });
 
-    // Only allow safe fields to be updated
-    const ALLOWED = ['description', 'narrative', 'featuredImage', 'shortDescription'];
-    for (const key of ALLOWED) {
-      if (updates[key] !== undefined) {
-        projects[idx][key] = updates[key];
-      }
-    }
+    if (description !== undefined) data[idx].description = description;
+    if (narrative !== undefined) data[idx].narrative = narrative;
+    if (featuredImage !== undefined) data[idx].featuredImage = featuredImage;
 
-    writeFileSync(DATA_PATH, JSON.stringify(projects, null, 2));
-    return NextResponse.json({ ok: true, project: projects[idx] });
-  } catch (err) {
-    return NextResponse.json({ error: 'Update failed' }, { status: 500 });
+    writeFileSync(DATA_PATH, JSON.stringify(data, null, 2));
+    return NextResponse.json({ ok: true, slug });
+  } catch (err: any) {
+    return NextResponse.json({ error: err.message }, { status: 500 });
   }
 }
