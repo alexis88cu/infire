@@ -69,10 +69,7 @@ export default function PortfolioPage() {
 }
 
 function ProjectCard({ project: p }: { project: Project }) {
-  const gallery: string[] = (p as any).galleryImages || [];
   const mainImg: string = (p as any).featuredImage || '';
-  const [hoveredThumb, setHoveredThumb] = useState<number | null>(null);
-  const displayImg = hoveredThumb !== null ? gallery[hoveredThumb] : mainImg;
 
   return (
     <a
@@ -91,31 +88,22 @@ function ProjectCard({ project: p }: { project: Project }) {
         (e.currentTarget as HTMLElement).style.borderColor = 'var(--border)';
         (e.currentTarget as HTMLElement).style.transform = 'translateY(0)';
         (e.currentTarget as HTMLElement).style.boxShadow = 'none';
-        setHoveredThumb(null);
       }}
     >
-      {/* Main image */}
+      {/* Single main image */}
       <div style={{ height: '200px', position: 'relative', overflow: 'hidden', background: '#111827' }}>
         {mainImg ? (
           <img
-            src={displayImg || mainImg}
+            src={mainImg}
             alt={p.projectName}
-            style={{
-              width: '100%', height: '100%', objectFit: 'cover', display: 'block',
-              transition: 'transform 0.4s ease',
-            }}
-            onError={e => { (e.target as HTMLImageElement).style.display = 'none'; }}
+            style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', transition: 'transform 0.4s ease' }}
           />
         ) : (
           <div style={{ width: '100%', height: '100%', background: 'linear-gradient(135deg,#1a2332,#111827)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <span style={{ fontSize: '2.5rem', opacity: 0.3 }}>🔥</span>
+            <div style={{ color: 'var(--orange)', fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.1em', opacity: 0.5 }}>INFIRE</div>
           </div>
         )}
-
-        {/* Gradient overlay */}
         <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(13,17,23,0.7) 0%, transparent 50%)' }} />
-
-        {/* Badges */}
         <div style={{ position: 'absolute', top: 10, left: 10, display: 'flex', gap: '6px' }}>
           <span style={{ background: 'rgba(13,17,23,0.85)', color: 'var(--gray)', fontSize: '0.68rem', padding: '2px 8px', borderRadius: '4px', fontWeight: 600, backdropFilter: 'blur(4px)' }}>
             {p.projectType}
@@ -126,37 +114,9 @@ function ProjectCard({ project: p }: { project: Project }) {
             </span>
           )}
         </div>
-
-        {/* Sprinkler count */}
         <div style={{ position: 'absolute', bottom: 10, right: 10, background: 'rgba(13,17,23,0.85)', borderRadius: '4px', padding: '2px 8px', fontSize: '0.72rem', color: '#adb5bd', backdropFilter: 'blur(4px)' }}>
           ~{(p.estimatedSprinklers || 0).toLocaleString()} heads
         </div>
-
-        {/* Gallery thumbnails — bottom left */}
-        {gallery.length > 0 && (
-          <div
-            style={{ position: 'absolute', bottom: 10, left: 10, display: 'flex', gap: '4px' }}
-            onClick={e => e.preventDefault()}
-          >
-            {gallery.map((thumb, i) => (
-              <div
-                key={i}
-                onMouseEnter={e => { e.stopPropagation(); e.preventDefault(); setHoveredThumb(i); }}
-                onMouseLeave={() => setHoveredThumb(null)}
-                style={{
-                  width: '36px', height: '36px', borderRadius: '5px', overflow: 'hidden',
-                  border: `2px solid ${hoveredThumb === i ? 'var(--orange)' : 'rgba(255,255,255,0.3)'}`,
-                  cursor: 'pointer', flexShrink: 0,
-                  transition: 'border-color 0.15s, transform 0.15s',
-                  transform: hoveredThumb === i ? 'scale(1.1)' : 'scale(1)',
-                  boxShadow: '0 2px 8px rgba(0,0,0,0.5)',
-                }}
-              >
-                <img src={thumb} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover', pointerEvents: 'none' }} />
-              </div>
-            ))}
-          </div>
-        )}
       </div>
 
       {/* Card body */}
