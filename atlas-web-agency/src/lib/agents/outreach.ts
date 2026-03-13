@@ -8,7 +8,7 @@ import { db, Lead } from '../db'
 import { generateOutreachCopy, generateDemoContent } from './analyzer'
 
 const DEMO_BASE_URL = 'https://atlaswebagency.net/demo'
-const OWNER_PHONE = process.env.OWNER_WHATSAPP_PHONE!  // e.g. 13137875230
+const OWNER_PHONE = process.env.OWNER_WHATSAPP_PHONE!  // e.g. 17864353507
 const WA_PHONE_ID = process.env.WHATSAPP_PHONE_NUMBER_ID!
 const WA_TOKEN = process.env.WHATSAPP_ACCESS_TOKEN!
 const RESEND_KEY = process.env.RESEND_API_KEY!

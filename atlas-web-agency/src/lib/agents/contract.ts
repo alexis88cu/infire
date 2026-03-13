@@ -43,7 +43,7 @@ Setup Fee: $${config.setup} (one-time)
 Monthly Fee: $${config.monthly}/month
 Date: ${today}
 Agency: Atlas Web Agency
-Agency Contact: Alexis | atlaswebagency.net | +1 (313) 787-5230
+Agency Contact: Alexis | atlaswebagency.net | +1 (786) 435-3507
 
 Write a clean, professional contract covering:
 1. Services included (website design, hosting, SSL, mobile responsive, contact form)

@@ -17,7 +17,7 @@ export default function Footer() {
             </p>
             <div className="flex gap-4 mt-5">
               <a
-                href="https://wa.me/13137875230"
+                href="https://wa.me/17864353507"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 bg-green-500/20 hover:bg-green-500/30 border border-green-500/30 rounded-lg flex items-center justify-center transition-colors"
@@ -54,7 +54,7 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold text-sm mb-4">Contact</h4>
             <ul className="space-y-2 text-slate-400 text-sm">
-              <li><a href="https://wa.me/13137875230" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">+1 (313) 787-5230</a></li>
+              <li><a href="https://wa.me/17864353507" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">+1 (786) 435-3507</a></li>
               <li><a href="mailto:sonny.onlyone@gmail.com" className="hover:text-white transition-colors">sonny.onlyone@gmail.com</a></li>
               <li className="text-slate-500">Florida, United States</li>
               <li><a href="https://atlaswebagency.net" className="hover:text-white transition-colors">atlaswebagency.net</a></li>

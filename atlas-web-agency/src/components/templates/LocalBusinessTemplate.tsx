@@ -33,7 +33,7 @@ export default function LocalBusinessTemplate() {
             <a href="#" className="bg-pink-500 hover:bg-pink-400 text-white font-bold px-8 py-4 rounded-xl text-lg transition-colors">
               Book Appointment
             </a>
-            <a href="tel:+13137875230" className="bg-white/10 border border-white/20 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-xl text-lg transition-colors">
+            <a href="tel:+17864353507" className="bg-white/10 border border-white/20 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-xl text-lg transition-colors">
               Call Us
             </a>
           </div>
@@ -66,7 +66,7 @@ export default function LocalBusinessTemplate() {
       <section className="py-16 px-6 text-center bg-neutral-900">
         <h2 className="text-3xl font-black mb-4">Want this for your barbershop or salon?</h2>
         <p className="text-neutral-400 mb-8">$250 setup + $14.99/month — Atlas Web Agency</p>
-        <a href="https://wa.me/13137875230?text=I%20want%20a%20barbershop%20website%20like%20the%20demo" className="bg-pink-500 hover:bg-pink-400 text-white font-bold px-10 py-4 rounded-xl text-lg transition-colors inline-block">
+        <a href="https://wa.me/17864353507?text=I%20want%20a%20barbershop%20website%20like%20the%20demo" className="bg-pink-500 hover:bg-pink-400 text-white font-bold px-10 py-4 rounded-xl text-lg transition-colors inline-block">
           Get This for Your Business →
         </a>
       </section>

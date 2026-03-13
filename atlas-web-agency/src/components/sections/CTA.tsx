@@ -17,7 +17,7 @@ export default function CTA() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="https://wa.me/13137875230?text=Hi%20Atlas%20Web%20Agency!%20I%27m%20ready%20to%20get%20my%20business%20website."
+              href="https://wa.me/17864353507?text=Hi%20Atlas%20Web%20Agency!%20I%27m%20ready%20to%20get%20my%20business%20website."
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 bg-green-500 hover:bg-green-400 text-white font-bold px-8 py-4 rounded-2xl text-lg transition-all shadow-lg shadow-green-500/30"

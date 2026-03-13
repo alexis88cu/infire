@@ -15,7 +15,7 @@ export default function Contact() {
 
           <div className="space-y-6">
             <a
-              href="https://wa.me/13137875230"
+              href="https://wa.me/17864353507"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-4 p-5 bg-green-500/10 border border-green-500/20 rounded-2xl hover:border-green-500/40 transition-all group"
@@ -25,7 +25,7 @@ export default function Contact() {
               </div>
               <div>
                 <div className="font-semibold text-sm text-green-300">WhatsApp (fastest)</div>
-                <div className="text-white font-bold">+1 (313) 787-5230</div>
+                <div className="text-white font-bold">+1 (786) 435-3507</div>
                 <div className="text-slate-500 text-xs">Usually responds within 1 hour</div>
               </div>
             </a>

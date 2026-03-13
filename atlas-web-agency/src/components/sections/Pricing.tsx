@@ -99,7 +99,7 @@ export default function Pricing() {
 
               {/* WhatsApp button */}
               <a
-                href={`https://wa.me/13137875230?text=${plan.waText}`}
+                href={`https://wa.me/17864353507?text=${plan.waText}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`flex items-center justify-center gap-2 font-semibold px-5 py-3 rounded-xl transition-all text-sm ${
