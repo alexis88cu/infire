@@ -9,9 +9,10 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
         <a href="/" className="flex items-center gap-2">
-          <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
-            <span className="text-white font-black text-sm">A</span>
-          </div>
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="7" cy="25" r="4" fill="#7DD8DC"/>
+            <path d="M13 24C13 24 11 10 18 5C22 2.5 26 4 27.5 8C29 12 27 18 22 21C18 23.5 13 24 13 24Z" fill="#7DD8DC"/>
+          </svg>
           <span className="font-bold text-white text-lg">Atlas <span className="text-blue-400">Web Agency</span></span>
         </a>
 
