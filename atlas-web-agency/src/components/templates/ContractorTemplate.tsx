@@ -14,7 +14,7 @@ export default function ContractorTemplate() {
           <a href="#" className="hover:text-white">Gallery</a>
           <a href="#" className="hover:text-white">Contact</a>
         </div>
-        <a href="https://wa.me/13137875230?text=I%20want%20a%20website%20like%20the%20contractor%20demo" className="bg-orange-500 hover:bg-orange-400 text-white text-sm font-bold px-5 py-2 rounded-lg transition-colors">
+        <a href="https://wa.me/17864353507?text=I%20want%20a%20website%20like%20the%20contractor%20demo" className="bg-orange-500 hover:bg-orange-400 text-white text-sm font-bold px-5 py-2 rounded-lg transition-colors">
           Free Estimate
         </a>
       </nav>
@@ -37,8 +37,8 @@ export default function ContractorTemplate() {
             <a href="#" className="bg-orange-500 hover:bg-orange-400 text-white font-bold px-8 py-4 rounded-xl text-lg transition-colors">
               Get Free Estimate
             </a>
-            <a href="tel:+13137875230" className="bg-white/10 border border-white/20 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-xl text-lg transition-colors">
-              Call (313) 787-5230
+            <a href="tel:+17864353507" className="bg-white/10 border border-white/20 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-xl text-lg transition-colors">
+              Call (786) 435-3507
             </a>
           </div>
         </div>
@@ -78,7 +78,7 @@ export default function ContractorTemplate() {
       <section className="py-16 px-6 text-center bg-gray-900">
         <h2 className="text-3xl font-black mb-4">Ready for a free roof estimate?</h2>
         <p className="text-gray-400 mb-8">We'll inspect your roof and give you an honest quote — no obligation.</p>
-        <a href="https://wa.me/13137875230?text=I%20want%20a%20website%20like%20this%20for%20my%20business" className="bg-orange-500 hover:bg-orange-400 text-white font-bold px-10 py-4 rounded-xl text-lg transition-colors inline-block">
+        <a href="https://wa.me/17864353507?text=I%20want%20a%20website%20like%20this%20for%20my%20business" className="bg-orange-500 hover:bg-orange-400 text-white font-bold px-10 py-4 rounded-xl text-lg transition-colors inline-block">
           Get This Website for Your Business →
         </a>
       </section>

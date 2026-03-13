@@ -57,7 +57,7 @@ export default function Demos() {
 
           {/* Custom CTA card */}
           <a
-            href="https://wa.me/13137875230?text=Hi!%20I%27d%20like%20a%20custom%20demo%20website%20for%20my%20business."
+            href="https://wa.me/17864353507?text=Hi!%20I%27d%20like%20a%20custom%20demo%20website%20for%20my%20business."
             target="_blank"
             rel="noopener noreferrer"
             className="group p-8 bg-blue-600/20 border border-blue-500/40 border-dashed rounded-3xl hover:scale-105 transition-all duration-200 flex flex-col items-center justify-center text-center gap-4"

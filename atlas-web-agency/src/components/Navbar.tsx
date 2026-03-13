@@ -23,7 +23,7 @@ export default function Navbar() {
           <a href="#demos" className="text-slate-300 hover:text-white text-sm transition-colors">Demos</a>
           <a href="#contact" className="text-slate-300 hover:text-white text-sm transition-colors">Contact</a>
           <a
-            href="https://wa.me/13137875230?text=Hi%20Atlas%20Web%20Agency%2C%20I%27m%20interested%20in%20a%20website%20for%20my%20business."
+            href="https://wa.me/17864353507?text=Hi%20Atlas%20Web%20Agency%2C%20I%27m%20interested%20in%20a%20website%20for%20my%20business."
             target="_blank"
             rel="noopener noreferrer"
             className="bg-blue-600 hover:bg-blue-500 text-white text-sm font-semibold px-5 py-2 rounded-xl transition-colors"
@@ -51,7 +51,7 @@ export default function Navbar() {
           <a href="#demos" onClick={() => setOpen(false)} className="text-slate-300 text-sm">Demos</a>
           <a href="#contact" onClick={() => setOpen(false)} className="text-slate-300 text-sm">Contact</a>
           <a
-            href="https://wa.me/13137875230?text=Hi%20Atlas%20Web%20Agency%2C%20I%27m%20interested%20in%20a%20website%20for%20my%20business."
+            href="https://wa.me/17864353507?text=Hi%20Atlas%20Web%20Agency%2C%20I%27m%20interested%20in%20a%20website%20for%20my%20business."
             target="_blank"
             rel="noopener noreferrer"
             className="bg-blue-600 text-white text-sm font-semibold px-5 py-2 rounded-xl text-center"

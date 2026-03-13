@@ -64,7 +64,7 @@ export default function RestaurantTemplate() {
       <section className="py-16 px-6 text-center bg-stone-900">
         <h2 className="text-3xl font-black mb-4">Want a website like this?</h2>
         <p className="text-stone-400 mb-8">$250 setup + $14.99/month — Atlas Web Agency</p>
-        <a href="https://wa.me/13137875230?text=I%20want%20a%20restaurant%20website%20like%20the%20demo" className="bg-yellow-500 hover:bg-yellow-400 text-stone-900 font-bold px-10 py-4 rounded-xl text-lg transition-colors inline-block">
+        <a href="https://wa.me/17864353507?text=I%20want%20a%20restaurant%20website%20like%20the%20demo" className="bg-yellow-500 hover:bg-yellow-400 text-stone-900 font-bold px-10 py-4 rounded-xl text-lg transition-colors inline-block">
           Get This for Your Restaurant →
         </a>
       </section>

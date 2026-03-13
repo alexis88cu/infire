@@ -12,7 +12,7 @@ export default function ThankYou() {
         </a>
         <div className="mt-6">
           <a
-            href="https://wa.me/13137875230"
+            href="https://wa.me/17864353507"
             target="_blank"
             rel="noopener noreferrer"
             className="text-green-400 underline text-sm"

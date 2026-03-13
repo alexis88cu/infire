@@ -77,7 +77,7 @@ export default function RealEstateTemplate() {
       <section className="py-16 px-6 text-center bg-zinc-900">
         <h2 className="text-3xl font-black mb-4">Want this website for your real estate business?</h2>
         <p className="text-zinc-400 mb-8">$250 setup + $14.99/month — Atlas Web Agency</p>
-        <a href="https://wa.me/13137875230?text=I%20want%20a%20real%20estate%20website%20like%20the%20demo" className="bg-purple-600 hover:bg-purple-500 text-white font-bold px-10 py-4 rounded-xl text-lg transition-colors inline-block">
+        <a href="https://wa.me/17864353507?text=I%20want%20a%20real%20estate%20website%20like%20the%20demo" className="bg-purple-600 hover:bg-purple-500 text-white font-bold px-10 py-4 rounded-xl text-lg transition-colors inline-block">
           Get This for Your Business →
         </a>
       </section>

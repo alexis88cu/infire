@@ -28,7 +28,7 @@ Let me know what you think!
 — Alexis
 Atlas Web Agency
 atlaswebagency.net
-+1 (313) 787-5230
++1 (786) 435-3507
 ```
 
 ### Instagram DM (short)
