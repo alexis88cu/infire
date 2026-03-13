@@ -1,10 +1,22 @@
-import { createClient } from '@supabase/supabase-js'
+import { createClient, SupabaseClient } from '@supabase/supabase-js'
 
-const supabaseUrl = process.env.SUPABASE_URL!
-const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY!
+let _db: SupabaseClient | null = null
 
-export const db = createClient(supabaseUrl, supabaseKey, {
-  auth: { persistSession: false },
+function getDb(): SupabaseClient {
+  if (!_db) {
+    const url = process.env.SUPABASE_URL
+    const key = process.env.SUPABASE_SERVICE_ROLE_KEY
+    if (!url || !key) throw new Error('SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY are required')
+    _db = createClient(url, key, { auth: { persistSession: false } })
+  }
+  return _db
+}
+
+// Lazy proxy — client only created on first actual DB call (not at import time)
+export const db = new Proxy({} as SupabaseClient, {
+  get(_t, prop) {
+    return (getDb() as unknown as Record<string | symbol, unknown>)[prop]
+  },
 })
 
 // ─── Types ───────────────────────────────────────────────────────────────────

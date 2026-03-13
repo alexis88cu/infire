@@ -1,7 +1,4 @@
-/**
- * Daily Cron — runs at 9am ET every day via Vercel Cron
- * Triggers the full automation pipeline
- */
+export const dynamic = 'force-dynamic'
 
 import { NextRequest, NextResponse } from 'next/server'
 import { runDailyPipeline } from '@/lib/agents/orchestrator'

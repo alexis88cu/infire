@@ -1,8 +1,4 @@
-/**
- * WhatsApp Business Cloud API Webhook
- * Receives incoming messages from leads.
- * Classifies intent with Claude and updates pipeline accordingly.
- */
+export const dynamic = 'force-dynamic'
 
 import { NextRequest, NextResponse } from 'next/server'
 import { db } from '@/lib/db'
