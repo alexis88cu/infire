@@ -1,11 +1,9 @@
-import { getProjects, getProject } from '@/lib/data';
+import { getProject } from '@/lib/data';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import ProjectGallery from '@/components/ProjectGallery';
 
-export async function generateStaticParams() {
-  return getProjects().map(p => ({ slug: p.slug }));
-}
+export const dynamic = 'force-dynamic';
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const p = getProject(params.slug);

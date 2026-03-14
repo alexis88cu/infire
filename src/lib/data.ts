@@ -1,5 +1,8 @@
-import projectsRaw from './projects.json';
-import blogRaw from './blog.json';
+import { readFileSync } from 'fs';
+import { join } from 'path';
+
+const PROJECTS_PATH = join(process.cwd(), 'src/lib/projects.json');
+const BLOG_PATH = join(process.cwd(), 'src/lib/blog.json');
 
 export interface Project {
   slug: string;
@@ -19,6 +22,7 @@ export interface Project {
   featuredImage?: string;
   seoTitle?: string;
   seoDescription?: string;
+  narrative?: string;
 }
 
 export interface Article {
@@ -39,32 +43,38 @@ export interface Article {
   featured?: boolean;
 }
 
-export const projects: Project[] = projectsRaw as Project[];
-export const articles: Article[] = blogRaw as Article[];
+function readProjects(): Project[] {
+  return JSON.parse(readFileSync(PROJECTS_PATH, 'utf8')) as Project[];
+}
+
+function readArticles(): Article[] {
+  return JSON.parse(readFileSync(BLOG_PATH, 'utf8')) as Article[];
+}
 
 export function getProjects(): Project[] {
-  return projects.sort((a, b) => (b.estimatedSprinklers || 0) - (a.estimatedSprinklers || 0));
+  return readProjects().sort((a, b) => (b.estimatedSprinklers || 0) - (a.estimatedSprinklers || 0));
 }
 
 export function getProject(slug: string): Project | undefined {
-  return projects.find(p => p.slug === slug);
+  return readProjects().find(p => p.slug === slug);
 }
 
 export function getFeaturedProjects(): Project[] {
-  return projects.filter(p => p.featured).slice(0, 6);
+  return readProjects().filter(p => p.featured).slice(0, 6);
 }
 
 export function getArticles(): Article[] {
-  return [...articles].sort((a, b) =>
+  return readArticles().sort((a, b) =>
     new Date(b.publishDate || 0).getTime() - new Date(a.publishDate || 0).getTime()
   );
 }
 
 export function getArticle(slug: string): Article | undefined {
-  return articles.find(a => a.slug === slug);
+  return readArticles().find(a => a.slug === slug);
 }
 
 export function getSiteMetrics() {
+  const projects = readProjects();
   const total = projects.reduce((sum, p) => sum + (p.estimatedSprinklers || 0), 0);
   const cities = new Set(projects.map(p => p.city).filter(Boolean)).size;
   return {
