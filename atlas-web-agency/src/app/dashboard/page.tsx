@@ -66,6 +66,8 @@ export default function Dashboard() {
   const [activeTab, setActiveTab] = useState<'pipeline' | 'contracts' | 'clients'>('contracts')
   const [approving, setApproving] = useState<string | null>(null)
   const [filterStatus, setFilterStatus] = useState<string>('all')
+  const [running, setRunning] = useState(false)
+  const [pipelineResult, setPipelineResult] = useState<string | null>(null)
 
   async function load() {
     const res = await fetch('/api/dashboard')
@@ -77,6 +79,25 @@ export default function Dashboard() {
   }
 
   useEffect(() => { load() }, [])
+
+  async function runPipeline() {
+    setRunning(true)
+    setPipelineResult(null)
+    try {
+      const res = await fetch('/api/pipeline/run', { method: 'POST' })
+      const data = await res.json()
+      if (data.result) {
+        const r = data.result
+        setPipelineResult(`✅ Done — Leads: ${r.newLeads} | Scored: ${r.scored} | Outreach: ${r.outreachSent} | Follow-ups: ${r.followUpsSent} | Contracts: ${r.contractsGenerated}`)
+      } else {
+        setPipelineResult(`❌ ${JSON.stringify(data)}`)
+      }
+      await load()
+    } catch (e) {
+      setPipelineResult(`❌ Error: ${String(e)}`)
+    }
+    setRunning(false)
+  }
 
   async function approveContract(contractId: string) {
     setApproving(contractId)
@@ -105,6 +126,13 @@ export default function Dashboard() {
             </span>
           )}
           <button
+            onClick={runPipeline}
+            disabled={running}
+            className="text-xs font-bold bg-blue-600 hover:bg-blue-500 disabled:opacity-50 text-white px-4 py-1.5 rounded-lg transition-all"
+          >
+            {running ? '⏳ Running...' : '▶ Run Pipeline'}
+          </button>
+          <button
             onClick={load}
             className="text-xs text-slate-400 hover:text-white border border-white/20 px-3 py-1.5 rounded-lg"
           >
@@ -114,6 +142,13 @@ export default function Dashboard() {
       </div>
 
       <div className="px-8 py-8 max-w-7xl mx-auto">
+        {/* Pipeline result */}
+        {pipelineResult && (
+          <div className={`mb-6 px-4 py-3 rounded-xl text-sm font-mono border ${pipelineResult.startsWith('✅') ? 'bg-green-950 border-green-700 text-green-300' : 'bg-red-950 border-red-700 text-red-300'}`}>
+            {pipelineResult}
+          </div>
+        )}
+
         {/* KPI Row */}
         {kpis && (
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 mb-10">
