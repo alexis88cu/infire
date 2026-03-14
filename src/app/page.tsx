@@ -1,5 +1,7 @@
 import { getFeaturedProjects, getArticles, getSiteMetrics, fmtDate } from '@/lib/data';
 
+export const dynamic = 'force-dynamic';
+
 export default function HomePage() {
   const featured = getFeaturedProjects();
   const articles = getArticles().slice(0, 3);
