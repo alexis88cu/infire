@@ -55,7 +55,7 @@ export default function ContactPage() {
         {/* Form */}
         <div>
           <h2 style={{ fontSize: '1.1rem', fontWeight: 700, marginBottom: '1.5rem' }}>Send a Message</h2>
-          <form action="https://formspree.io/f/REPLACE_WITH_YOUR_ID" method="POST">
+          <form action="https://formspree.io/f/mvzwqbbo" method="POST">
             {[
               { id: 'name', label: 'Name', type: 'text', placeholder: 'John Smith' },
               { id: 'email', label: 'Email', type: 'email', placeholder: 'john@company.com' },
