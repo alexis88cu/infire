@@ -2,149 +2,108 @@ import { NextRequest, NextResponse } from 'next/server';
 import { readFileSync } from 'fs';
 import path from 'path';
 
-// Curated topic list for automated weekly posts
-const TOPICS = [
+// ─── Source blog configurations ───────────────────────────────────────────────
+
+const SOURCES = [
   {
-    topic: 'Fire sprinkler head types: pendant, upright, sidewall, and concealed — selection criteria and code requirements',
-    category: 'Engineering Insight',
-    tags: ['Sprinklers', 'NFPA 13', 'System Design', 'Head Types'],
-    image: 'https://images.unsplash.com/photo-1590273946776-394a07d71413?w=1400&q=85&auto=format&fit=crop',
-    imageAlt: 'Fire sprinkler head installed in ceiling',
+    name: 'qrfs',
+    listingUrl: 'https://blog.qrfs.com/',
+    // WordPress: articles linked from h2.entry-title > a
+    articleLinkPattern: /href="(https?:\/\/blog\.qrfs\.com\/\d+[^"]+)"/g,
+    contentSelectors: ['entry-content', 'post-content', 'article-content'],
   },
   {
-    topic: 'Wet vs dry vs preaction vs deluge: choosing the right sprinkler system type for your project',
-    category: 'Engineering Insight',
-    tags: ['System Types', 'NFPA 13', 'System Design', 'Wet Pipe', 'Dry Pipe'],
-    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1400&q=85&auto=format&fit=crop',
-    imageAlt: 'Industrial fire protection piping',
+    name: 'sprinklermatic',
+    listingUrl: 'https://sprinklermatic.com/blog/',
+    articleLinkPattern: /href="(https?:\/\/sprinklermatic\.com\/blog\/[a-z0-9\-]+\/)"/g,
+    contentSelectors: ['entry-content', 'post-content', 'article-content'],
   },
   {
-    topic: 'NFPA 72 fire alarm system design: detection, notification, and code compliance for commercial buildings',
-    category: 'Code Update',
-    tags: ['NFPA 72', 'Fire Alarm', 'System Design', 'Commercial'],
-    image: 'https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1400&q=85&auto=format&fit=crop',
-    imageAlt: 'Commercial building fire alarm system',
-  },
-  {
-    topic: 'Occupancy hazard classification: how to determine Light, Ordinary, and Extra Hazard groups under NFPA 13',
-    category: 'Engineering Insight',
-    tags: ['Hazard Classification', 'NFPA 13', 'System Design', 'Occupancy'],
-    image: 'https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1400&q=85&auto=format&fit=crop',
-    imageAlt: 'Commercial building exterior',
-  },
-  {
-    topic: 'Standpipe systems: Classes I, II, and III — when each applies and NFPA 14 design requirements',
-    category: 'Engineering Insight',
-    tags: ['Standpipe', 'NFPA 14', 'High-Rise', 'System Design'],
-    image: 'https://images.unsplash.com/photo-1479839672679-a46483c0e7c8?w=1400&q=85&auto=format&fit=crop',
-    imageAlt: 'High-rise building fire protection standpipe',
-  },
-  {
-    topic: 'NFPA 13R and 13D: residential sprinkler systems for multifamily and one-and-two family dwellings',
-    category: 'Code Update',
-    tags: ['Residential', 'NFPA 13R', 'NFPA 13D', 'Sprinklers'],
-    image: 'https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=1400&q=85&auto=format&fit=crop',
-    imageAlt: 'Residential building fire sprinkler system',
-  },
-  {
-    topic: 'Fire department connections: design requirements, placement, and signage under NFPA 13',
-    category: 'Engineering Insight',
-    tags: ['FDC', 'NFPA 13', 'Water Supply', 'System Design'],
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1400&q=85&auto=format&fit=crop',
-    imageAlt: 'Fire department siamese connection on building facade',
-  },
-  {
-    topic: 'Backflow preventers in fire protection systems: types, NFPA requirements, and annual testing procedures',
-    category: 'Inspection & ITM',
-    tags: ['Backflow', 'NFPA 25', 'Water Supply', 'Testing'],
-    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1400&q=85&auto=format&fit=crop',
-    imageAlt: 'Fire protection piping and valve assembly',
-  },
-  {
-    topic: 'Hydraulic calculations for fire sprinkler systems: density/area method and pipe schedule design',
-    category: 'Engineering Insight',
-    tags: ['Hydraulics', 'NFPA 13', 'System Design', 'Calculations'],
-    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1400&q=85&auto=format&fit=crop',
-    imageAlt: 'Engineering drawings and hydraulic calculations',
-  },
-  {
-    topic: 'Storage protection: in-rack sprinklers, commodity classification, and NFPA 13 requirements for warehouses',
-    category: 'Engineering Insight',
-    tags: ['Storage', 'NFPA 13', 'Warehouses', 'Rack Storage'],
-    image: 'https://images.unsplash.com/photo-1553413077-190dd305871c?w=1400&q=85&auto=format&fit=crop',
-    imageAlt: 'Warehouse rack storage with overhead sprinkler system',
-  },
-  {
-    topic: 'ESFR sprinklers: Early Suppression Fast Response heads for high-bay warehouse applications',
-    category: 'Engineering Insight',
-    tags: ['ESFR', 'NFPA 13', 'Warehouses', 'Storage Protection'],
-    image: 'https://images.unsplash.com/photo-1553413077-190dd305871c?w=1400&q=85&auto=format&fit=crop',
-    imageAlt: 'Large warehouse facility with ESFR sprinkler system',
-  },
-  {
-    topic: 'Clean agent suppression systems: FM-200 and Novec 1230 for data centers and sensitive equipment rooms',
-    category: 'Engineering Insight',
-    tags: ['Clean Agent', 'NFPA 2001', 'Data Centers', 'Special Hazards'],
-    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1400&q=85&auto=format&fit=crop',
-    imageAlt: 'Data center server room with fire suppression system',
-  },
-  {
-    topic: 'Valve supervision and tamper switches: maintaining service-ready sprinkler systems per NFPA 25',
-    category: 'Inspection & ITM',
-    tags: ['Valves', 'NFPA 25', 'ITM', 'Supervision'],
-    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1400&q=85&auto=format&fit=crop',
-    imageAlt: 'Fire protection control valve with tamper switch',
-  },
-  {
-    topic: 'Underground fire mains: pipe materials, installation, and hydrostatic testing per NFPA 24',
-    category: 'Engineering Insight',
-    tags: ['Underground', 'NFPA 24', 'Water Supply', 'Installation'],
-    image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1400&q=85&auto=format&fit=crop',
-    imageAlt: 'Underground fire main installation',
-  },
-  {
-    topic: 'Sprinkler system impairment procedures: emergency and preplanned impairment management under NFPA 25',
-    category: 'Inspection & ITM',
-    tags: ['Impairment', 'NFPA 25', 'Fire Watch', 'ITM'],
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1400&q=85&auto=format&fit=crop',
-    imageAlt: 'Fire protection system maintenance and inspection',
-  },
-  {
-    topic: 'Kitchen hood fire suppression systems: NFPA 96 requirements and wet chemical agent design',
-    category: 'Engineering Insight',
-    tags: ['Kitchen', 'Suppression', 'NFPA 96', 'Wet Chemical'],
-    image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1400&q=85&auto=format&fit=crop',
-    imageAlt: 'Commercial kitchen hood fire suppression system',
-  },
-  {
-    topic: 'Foam-water sprinkler systems for flammable liquid hazards: NFPA 16 design and application',
-    category: 'Engineering Insight',
-    tags: ['Foam', 'NFPA 16', 'Special Hazards', 'Flammable Liquids'],
-    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1400&q=85&auto=format&fit=crop',
-    imageAlt: 'Industrial fire protection for flammable liquid storage',
-  },
-  {
-    topic: 'As-built drawings and record keeping for fire protection systems: NFPA 25 documentation requirements',
-    category: 'Inspection & ITM',
-    tags: ['Documentation', 'As-Built', 'NFPA 25', 'Record Keeping'],
-    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1400&q=85&auto=format&fit=crop',
-    imageAlt: 'Fire protection system as-built drawings',
-  },
-  {
-    topic: 'Special hazard occupancies: fire protection design for aircraft hangars, parking structures, and cold storage',
-    category: 'Engineering Insight',
-    tags: ['Special Hazards', 'NFPA 13', 'Aircraft Hangars', 'Parking'],
-    image: 'https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1400&q=85&auto=format&fit=crop',
-    imageAlt: 'Special occupancy building fire protection',
-  },
-  {
-    topic: 'Anti-freeze sprinkler systems: glycol solutions, system design, and NFPA 13 requirements for unheated spaces',
-    category: 'Engineering Insight',
-    tags: ['Anti-Freeze', 'NFPA 13', 'System Design', 'Cold Weather'],
-    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1400&q=85&auto=format&fit=crop',
-    imageAlt: 'Fire sprinkler system in unheated building',
+    name: 'nfpa',
+    listingUrl: 'https://www.nfpa.org/news-blogs-and-articles/NFPA-Blogs',
+    articleLinkPattern: /href="(\/news-blogs-and-articles\/blogs\/[^"]+)"/g,
+    baseUrl: 'https://www.nfpa.org',
+    contentSelectors: ['article-body', 'rich-text', 'blog-content'],
   },
 ];
+
+const BROWSER_HEADERS = {
+  'User-Agent':
+    'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36',
+  Accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'Accept-Language': 'en-US,en;q=0.9',
+  'Cache-Control': 'no-cache',
+};
+
+// ─── HTML utilities ────────────────────────────────────────────────────────────
+
+function stripHtml(html: string): string {
+  return html
+    .replace(/<script[\s\S]*?<\/script>/gi, ' ')
+    .replace(/<style[\s\S]*?<\/style>/gi, ' ')
+    .replace(/<nav[\s\S]*?<\/nav>/gi, ' ')
+    .replace(/<header[\s\S]*?<\/header>/gi, ' ')
+    .replace(/<footer[\s\S]*?<\/footer>/gi, ' ')
+    .replace(/<aside[\s\S]*?<\/aside>/gi, ' ')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/&nbsp;/g, ' ')
+    .replace(/&#\d+;/g, ' ')
+    .replace(/\s{2,}/g, ' ')
+    .trim();
+}
+
+function extractSection(html: string, classNames: string[]): string {
+  for (const cls of classNames) {
+    const pattern = new RegExp(
+      `class="[^"]*${cls}[^"]*"[^>]*>([\\s\\S]{200,})`,
+      'i'
+    );
+    const m = html.match(pattern);
+    if (m) {
+      // Take up to 6000 chars of content
+      return stripHtml(m[1].slice(0, 6000));
+    }
+  }
+  // Fallback: strip all HTML
+  return stripHtml(html).slice(0, 4000);
+}
+
+function extractTitle(html: string): string {
+  const patterns = [
+    /<h1[^>]*class="[^"]*(?:entry-title|post-title|article-title)[^"]*"[^>]*>([\s\S]*?)<\/h1>/i,
+    /<h1[^>]*>([\s\S]*?)<\/h1>/i,
+    /<title>([\s\S]*?)<\/title>/i,
+  ];
+  for (const p of patterns) {
+    const m = html.match(p);
+    if (m) return stripHtml(m[1]).trim().replace(/\s*[|\-–]\s*.+$/, '').trim();
+  }
+  return '';
+}
+
+async function fetchWithRetry(url: string, retries = 2): Promise<string | null> {
+  for (let i = 0; i <= retries; i++) {
+    try {
+      const res = await fetch(url, {
+        headers: BROWSER_HEADERS,
+        signal: AbortSignal.timeout(12000),
+      });
+      if (res.ok) return await res.text();
+      if (res.status === 403 || res.status === 401) return null; // blocked, don't retry
+    } catch {
+      if (i === retries) return null;
+      await new Promise((r) => setTimeout(r, 1000 * (i + 1)));
+    }
+  }
+  return null;
+}
+
+// ─── Slug helpers ──────────────────────────────────────────────────────────────
 
 function slugify(text: string): string {
   return text
@@ -156,6 +115,42 @@ function slugify(text: string): string {
     .slice(0, 80);
 }
 
+// ─── Scrape: fetch listing → pick article → fetch body ────────────────────────
+
+async function scrapeSource(
+  sourceIdx: number
+): Promise<{ title: string; body: string; sourceUrl: string } | null> {
+  const source = SOURCES[sourceIdx];
+  const listHtml = await fetchWithRetry(source.listingUrl);
+  if (!listHtml) return null;
+
+  const links: string[] = [];
+  let m: RegExpExecArray | null;
+  const pattern = new RegExp(source.articleLinkPattern.source, 'g');
+  while ((m = pattern.exec(listHtml)) !== null) {
+    const url = source.baseUrl ? source.baseUrl + m[1] : m[1];
+    if (!links.includes(url)) links.push(url);
+    if (links.length >= 8) break;
+  }
+
+  if (links.length === 0) return null;
+
+  // Try articles until one returns content
+  for (const url of links.slice(0, 5)) {
+    const artHtml = await fetchWithRetry(url);
+    if (!artHtml) continue;
+    const title = extractTitle(artHtml);
+    const body = extractSection(artHtml, source.contentSelectors);
+    if (title && body.length > 300) {
+      return { title, body, sourceUrl: url };
+    }
+  }
+
+  return null;
+}
+
+// ─── Main cron handler ─────────────────────────────────────────────────────────
+
 export async function GET(req: NextRequest) {
   const authHeader = req.headers.get('authorization');
   const force = req.nextUrl.searchParams.get('force') === '1';
@@ -164,89 +159,123 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
 
+  const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY;
+  const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
+  const GITHUB_REPO = process.env.GITHUB_REPO || 'alexis88cu/infire';
+
+  if (!ANTHROPIC_API_KEY) {
+    return NextResponse.json({ error: 'ANTHROPIC_API_KEY not configured' }, { status: 500 });
+  }
+
   try {
-    // Read current articles
+    // Read current blog posts
     const blogPath = path.join(process.cwd(), 'src/lib/blog.json');
     const articles: any[] = JSON.parse(readFileSync(blogPath, 'utf-8'));
 
-    // Skip if already posted this week (unless forced)
+    // Skip if posted recently (unless forced)
     if (!force) {
       const sorted = [...articles].sort(
         (a, b) => new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime()
       );
-      const lastPost = sorted[0];
-      if (lastPost) {
-        const daysSince = (Date.now() - new Date(lastPost.publishDate).getTime()) / (1000 * 60 * 60 * 24);
+      const last = sorted[0];
+      if (last) {
+        const daysSince =
+          (Date.now() - new Date(last.publishDate).getTime()) / (1000 * 60 * 60 * 24);
         if (daysSince < 6) {
           return NextResponse.json({
             message: 'Already posted this week',
-            lastPost: lastPost.slug,
+            lastPost: last.slug,
             daysAgo: Math.round(daysSince),
           });
         }
       }
     }
 
-    // Find available topics (not yet covered)
-    const existingSlugs = new Set(articles.map((a: any) => a.slug));
-    const existingTitles = articles.map((a: any) => a.title.toLowerCase());
-    const available = TOPICS.filter((t) => {
-      const topicSlug = slugify(t.topic.split(':')[0]);
-      return (
-        !existingSlugs.has(topicSlug) &&
-        !existingTitles.some((title) =>
-          title.includes(t.topic.split(':')[0].toLowerCase().slice(0, 30))
-        )
-      );
-    });
+    // ── 1. Try to scrape source content ─────────────────────────────────────
+    // Rotate sources by week number so we spread across all three
+    const weekNum = Math.floor(Date.now() / (7 * 24 * 60 * 60 * 1000));
+    let scraped: { title: string; body: string; sourceUrl: string } | null = null;
 
-    if (available.length === 0) {
-      return NextResponse.json({ message: 'All topics have been covered — add more to TOPICS list.' });
+    for (let attempt = 0; attempt < SOURCES.length; attempt++) {
+      const sourceIdx = (weekNum + attempt) % SOURCES.length;
+      scraped = await scrapeSource(sourceIdx);
+      if (scraped) break;
     }
 
-    // Pick a random available topic
-    const topicData = available[Math.floor(Math.random() * available.length)];
-    const today = new Date().toISOString();
+    // ── 2. Build Claude prompt ───────────────────────────────────────────────
+    let prompt: string;
 
-    // Generate article with Claude
-    const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY;
-    if (!ANTHROPIC_API_KEY) {
-      return NextResponse.json({ error: 'ANTHROPIC_API_KEY not configured' }, { status: 500 });
-    }
+    if (scraped) {
+      // Rewrite scraped content in technical language
+      prompt = `You are a senior fire protection engineer writing for Infire Inc. (infireinc.net), a fire protection engineering consulting company in Miami, FL.
 
-    const prompt = `You are a fire protection engineering expert writing for Infire Inc. (infireinc.net), a fire protection engineering consulting company based in Miami, FL.
+A recent fire protection industry article has been identified on this topic:
+ORIGINAL TITLE: ${scraped.title}
+ORIGINAL CONTENT EXCERPT:
+${scraped.body.slice(0, 3000)}
 
-Write a professional, authoritative blog article on this exact topic:
-"${topicData.topic}"
+Your task: Write an original, authoritative technical article for fire protection engineers that covers the same subject matter. The article must:
+- Be completely original — no references to the source, no attribution
+- Use precise NFPA code citations and engineering terminology
+- Be written for licensed fire protection engineers, designers, and AHJs
+- Expand on the technical details with additional depth and practical insights
+- 650-950 words in the body
 
-Article requirements:
-- Audience: fire protection engineers, designers, contractors, AHJs, and building industry professionals
-- Based on current NFPA standards and real field practice
-- Practical, direct, technical — no marketing fluff
-- Body length: 600-900 words minimum
-- Use this exact markdown body format:
+Body markdown format:
+**Section Title — Optional Detail**
 
-**Section Title — Optional Subtitle**
+Technical paragraph content. Double newlines between paragraphs.
 
-Content paragraphs with double newlines between them.
+*Sub-heading* for subsections within a section.
 
-*Subsection label* starts a subsection within a section.
-
-Another paragraph continues.
-
----
-
-Return ONLY a valid JSON object (no markdown wrapper, no backticks, raw JSON only) with these exact fields:
+Return ONLY a raw JSON object (no markdown fences) with:
 {
-  "title": "Specific, practitioner-focused title (max 72 chars)",
-  "subtitle": "What the reader will learn — specific and practical (max 120 chars)",
-  "hook": "2-3 sentence compelling opening that states the core problem or insight. Written for engineers, not marketers.",
-  "body": "Full article body in the markdown format shown above. Minimum 600 words. Use **Section Title** for sections, *subsection* for subsections, double newlines between paragraphs.",
-  "takeaway": "One sentence summary of the key practical insight for practitioners",
+  "title": "Specific technical title (max 72 chars)",
+  "subtitle": "What the engineer will learn — precise and practical (max 120 chars)",
+  "hook": "2-3 sentence opening that frames the engineering problem or code requirement. Direct, technical.",
+  "body": "Full article body using the format above. 650-950 words.",
+  "takeaway": "One-sentence key insight for field practitioners",
+  "category": "Engineering Insight" or "Code Update" or "Inspection & ITM",
+  "tags": ["tag1", "tag2", "tag3", "tag4"],
   "seoTitle": "Title | Infire Inc. (max 70 chars)",
-  "seoDescription": "150-160 character meta description for search engines"
+  "seoDescription": "150-160 char meta description"
 }`;
+    } else {
+      // Fallback: generate original content from Claude's knowledge
+      const existingTitles = articles.map((a: any) => a.title).join('\n');
+      prompt = `You are a senior fire protection engineer writing for Infire Inc. (infireinc.net), a fire protection engineering consulting company in Miami, FL.
 
+Write an original, authoritative technical article on a current fire protection engineering topic. Choose a topic NOT already covered by these existing articles:
+${existingTitles}
+
+Requirements:
+- Pick a topic relevant to current NFPA standards, field engineering practice, or inspection/ITM
+- Written for licensed fire protection engineers, designers, and AHJs
+- Precise NFPA code citations, real engineering depth
+- 650-950 words in the body
+
+Body markdown format:
+**Section Title — Optional Detail**
+
+Technical paragraph. Double newlines between paragraphs.
+
+*Sub-heading* for subsections.
+
+Return ONLY a raw JSON object (no markdown fences) with:
+{
+  "title": "Specific technical title (max 72 chars)",
+  "subtitle": "What the engineer will learn — precise and practical (max 120 chars)",
+  "hook": "2-3 sentence opening that frames the engineering problem or code requirement. Direct, technical.",
+  "body": "Full article body using the format above. 650-950 words.",
+  "takeaway": "One-sentence key insight for field practitioners",
+  "category": "Engineering Insight" or "Code Update" or "Inspection & ITM",
+  "tags": ["tag1", "tag2", "tag3", "tag4"],
+  "seoTitle": "Title | Infire Inc. (max 70 chars)",
+  "seoDescription": "150-160 char meta description"
+}`;
+    }
+
+    // ── 3. Generate with Claude ──────────────────────────────────────────────
     const aiRes = await fetch('https://api.anthropic.com/v1/messages', {
       method: 'POST',
       headers: {
@@ -273,25 +302,43 @@ Return ONLY a valid JSON object (no markdown wrapper, no backticks, raw JSON onl
     try {
       generated = JSON.parse(rawText);
     } catch {
-      const match = rawText.match(/\{[\s\S]*\}/);
-      if (!match) throw new Error('Could not parse Claude response as JSON');
-      generated = JSON.parse(match[0]);
+      const jsonMatch = rawText.match(/\{[\s\S]*\}/);
+      if (!jsonMatch) throw new Error('Could not parse Claude response as JSON');
+      generated = JSON.parse(jsonMatch[0]);
     }
 
-    // Build complete article object matching blog.json schema
+    // ── 4. Build complete article object ────────────────────────────────────
     const slug = slugify(generated.title);
     const wordCount = generated.body.split(/\s+/).length;
+
+    // Unsplash images mapped by category
+    const categoryImages: Record<string, { url: string; alt: string }> = {
+      'Engineering Insight': {
+        url: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1400&q=85&auto=format&fit=crop',
+        alt: 'Fire protection engineering and piping systems',
+      },
+      'Code Update': {
+        url: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1400&q=85&auto=format&fit=crop',
+        alt: 'Engineering code documentation and standards review',
+      },
+      'Inspection & ITM': {
+        url: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1400&q=85&auto=format&fit=crop',
+        alt: 'Fire protection system inspection and testing',
+      },
+    };
+    const img = categoryImages[generated.category] || categoryImages['Engineering Insight'];
+
     const article = {
       _id: slug.replace(/-/g, '_').slice(0, 50),
       slug,
       title: generated.title,
       subtitle: generated.subtitle,
       author: 'Infire Author',
-      publishDate: today,
-      category: topicData.category,
-      tags: topicData.tags,
+      publishDate: new Date().toISOString(),
+      category: generated.category,
+      tags: generated.tags,
       readTime: Math.max(3, Math.ceil(wordCount / 200)),
-      featuredImage: topicData.image,
+      featuredImage: img.url,
       seoTitle: generated.seoTitle,
       seoDescription: generated.seoDescription,
       publishedOnSite: true,
@@ -299,24 +346,19 @@ Return ONLY a valid JSON object (no markdown wrapper, no backticks, raw JSON onl
       hook: generated.hook,
       body: generated.body,
       takeaway: generated.takeaway,
-      imageConceptNote: `Fire protection engineering: ${topicData.topic.split(':')[0]}`,
-      imageAlt: topicData.imageAlt,
+      imageConceptNote: `Fire protection engineering: ${generated.title}`,
+      imageAlt: img.alt,
       imageLayout: 'hero-full',
       inlineImages: {},
     };
 
-    // Prepend new article to blog posts
     const updatedArticles = [article, ...articles];
 
-    // Commit to GitHub to persist and trigger Vercel redeploy
-    const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
-    const GITHUB_REPO = process.env.GITHUB_REPO; // format: "owner/repo"
-
-    if (!GITHUB_TOKEN || !GITHUB_REPO) {
+    // ── 5. Commit to GitHub ──────────────────────────────────────────────────
+    if (!GITHUB_TOKEN) {
       return NextResponse.json(
         {
-          error: 'GitHub not configured — post generated but not saved.',
-          hint: 'Set GITHUB_TOKEN and GITHUB_REPO env vars in Vercel.',
+          error: 'GITHUB_TOKEN not configured — post generated but not saved.',
           article,
         },
         { status: 500 }
@@ -324,8 +366,6 @@ Return ONLY a valid JSON object (no markdown wrapper, no backticks, raw JSON onl
     }
 
     const filePath = 'src/lib/blog.json';
-
-    // Get current file SHA (required for update)
     const fileRes = await fetch(
       `https://api.github.com/repos/${GITHUB_REPO}/contents/${filePath}`,
       {
@@ -342,8 +382,6 @@ Return ONLY a valid JSON object (no markdown wrapper, no backticks, raw JSON onl
     }
 
     const { sha } = await fileRes.json();
-
-    // Commit updated blog.json
     const content = Buffer.from(JSON.stringify(updatedArticles, null, 2)).toString('base64');
 
     const commitRes = await fetch(
@@ -373,7 +411,8 @@ Return ONLY a valid JSON object (no markdown wrapper, no backticks, raw JSON onl
       slug: article.slug,
       title: article.title,
       wordCount,
-      message: 'Post generated and committed. Vercel will auto-deploy in ~2 minutes.',
+      scraped: scraped ? scraped.sourceUrl : 'fallback-generated',
+      message: 'Post published and committed. Vercel will auto-deploy.',
     });
   } catch (err: any) {
     console.error('[CRON GENERATE-POST ERROR]', err);
