@@ -9,8 +9,8 @@ export async function POST(req: NextRequest) {
   try {
     const { slug, secret } = await req.json();
 
-    // Simple secret key check
-    const NEWSLETTER_SECRET = process.env.NEWSLETTER_SECRET;
+    // Simple secret key check (falls back to CRON_SECRET if NEWSLETTER_SECRET not set)
+    const NEWSLETTER_SECRET = process.env.NEWSLETTER_SECRET || process.env.CRON_SECRET;
     if (!NEWSLETTER_SECRET || secret !== NEWSLETTER_SECRET) {
       return NextResponse.json({ message: 'Unauthorized.' }, { status: 401 });
     }
