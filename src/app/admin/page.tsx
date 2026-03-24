@@ -16,11 +16,10 @@ type Project = {
 type Subscriber = {
   id: string;
   email: string;
-  first_name?: string;
-  last_name?: string;
-  unsubscribed: boolean;
-  created_at?: string;
-  data?: { industry?: string };
+  name: string;
+  industry: string;
+  newsletter: boolean;
+  createdAt: string;
 };
 
 const inp: React.CSSProperties = { width: '100%', background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.12)', borderRadius: '8px', padding: '0.7rem 0.9rem', color: '#e6edf3', fontSize: '0.88rem', outline: 'none', boxSizing: 'border-box', fontFamily: 'inherit' };
@@ -47,14 +46,13 @@ function SubscribersTab() {
 
   const filtered = subscribers.filter(s => {
     const q = search.toLowerCase();
-    const name = `${s.first_name ?? ''} ${s.last_name ?? ''}`.toLowerCase();
-    const matchSearch = !q || s.email.toLowerCase().includes(q) || name.includes(q) || (s.data?.industry ?? '').toLowerCase().includes(q);
-    const matchFilter = filter === 'all' || (filter === 'newsletter' && !s.unsubscribed) || (filter === 'free' && s.unsubscribed);
+    const matchSearch = !q || s.email.toLowerCase().includes(q) || (s.name ?? '').toLowerCase().includes(q) || (s.industry ?? '').toLowerCase().includes(q);
+    const matchFilter = filter === 'all' || (filter === 'newsletter' && s.newsletter) || (filter === 'free' && !s.newsletter);
     return matchSearch && matchFilter;
   });
 
-  const newsletterCount = subscribers.filter(s => !s.unsubscribed).length;
-  const freeCount = subscribers.filter(s => s.unsubscribed).length;
+  const newsletterCount = subscribers.filter(s => s.newsletter).length;
+  const freeCount = subscribers.filter(s => !s.newsletter).length;
 
   if (loading) return (
     <div style={{ textAlign: 'center', padding: '4rem', color: '#7d8590' }}>
@@ -117,19 +115,19 @@ function SubscribersTab() {
           </thead>
           <tbody>
             {filtered.map(s => {
-              const name = [s.first_name, s.last_name].filter(Boolean).join(' ') || '—';
-              const joined = s.created_at ? new Date(s.created_at).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) : '—';
+              const displayName = s.name || '—';
+              const joined = s.createdAt ? new Date(s.createdAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) : '—';
               return (
                 <tr key={s.id} style={{ borderBottom: '1px solid rgba(255,255,255,0.04)' }}
                   onMouseEnter={e => (e.currentTarget as HTMLElement).style.background = 'rgba(255,255,255,0.02)'}
                   onMouseLeave={e => (e.currentTarget as HTMLElement).style.background = 'transparent'}>
-                  <td style={{ padding: '0.7rem 0.75rem', color: '#e6edf3', fontWeight: 600 }}>{name}</td>
+                  <td style={{ padding: '0.7rem 0.75rem', color: '#e6edf3', fontWeight: 600 }}>{displayName}</td>
                   <td style={{ padding: '0.7rem 0.75rem', color: '#adb5bd' }}>{s.email}</td>
-                  <td style={{ padding: '0.7rem 0.75rem', color: '#8a94a6' }}>{s.data?.industry || '—'}</td>
+                  <td style={{ padding: '0.7rem 0.75rem', color: '#8a94a6' }}>{s.industry || '—'}</td>
                   <td style={{ padding: '0.7rem 0.75rem' }}>
-                    {s.unsubscribed
-                      ? <span style={{ background: 'rgba(125,133,144,0.15)', color: '#7d8590', padding: '2px 8px', borderRadius: '4px', fontSize: '0.72rem', fontWeight: 700 }}>Free</span>
-                      : <span style={{ background: 'rgba(243,121,61,0.15)', color: '#f3793d', padding: '2px 8px', borderRadius: '4px', fontSize: '0.72rem', fontWeight: 700 }}>Newsletter</span>
+                    {s.newsletter
+                      ? <span style={{ background: 'rgba(243,121,61,0.15)', color: '#f3793d', padding: '2px 8px', borderRadius: '4px', fontSize: '0.72rem', fontWeight: 700 }}>Newsletter</span>
+                      : <span style={{ background: 'rgba(125,133,144,0.15)', color: '#7d8590', padding: '2px 8px', borderRadius: '4px', fontSize: '0.72rem', fontWeight: 700 }}>Free</span>
                     }
                   </td>
                   <td style={{ padding: '0.7rem 0.75rem', color: '#636e7b', whiteSpace: 'nowrap' }}>{joined}</td>
