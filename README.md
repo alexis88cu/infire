@@ -1,4 +1,4 @@
-# Infire Inc. — infireinc.net
+# Infire Inc. — infireinc.com
 
 Built with Next.js 14, deployed on Vercel.
 

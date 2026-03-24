@@ -33,7 +33,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <span style={{ fontWeight: 900, fontSize: '1rem', letterSpacing: '0.08em', color: '#f3793d', opacity: 0.85, textTransform: 'uppercase' }}>Infire</span>
           </div>
           <p><strong>Infire Inc.</strong> — Fire Protection Engineering</p>
-          <p>Miami, FL · infireinc.net · Licensed &amp; Insured</p>
+          <p>Miami, FL · infireinc.com · Licensed &amp; Insured</p>
           <p className="footer-copy">© {new Date().getFullYear()} Infire Inc. All rights reserved.</p>
         </footer>
       </body>

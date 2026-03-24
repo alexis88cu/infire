@@ -207,7 +207,7 @@ export async function GET(req: NextRequest) {
 
     if (scraped) {
       // Rewrite scraped content in technical language
-      prompt = `You are a senior fire protection engineer writing for Infire Inc. (infireinc.net), a fire protection engineering consulting company in Miami, FL.
+      prompt = `You are a senior fire protection engineer writing for Infire Inc. (infireinc.com), a fire protection engineering consulting company in Miami, FL.
 
 A recent fire protection industry article has been identified on this topic:
 ORIGINAL TITLE: ${scraped.title}
@@ -243,7 +243,7 @@ Return ONLY a raw JSON object (no markdown fences) with:
     } else {
       // Fallback: generate original content from Claude's knowledge
       const existingTitles = articles.map((a: any) => a.title).join('\n');
-      prompt = `You are a senior fire protection engineer writing for Infire Inc. (infireinc.net), a fire protection engineering consulting company in Miami, FL.
+      prompt = `You are a senior fire protection engineer writing for Infire Inc. (infireinc.com), a fire protection engineering consulting company in Miami, FL.
 
 Write an original, authoritative technical article on a current fire protection engineering topic. Choose a topic NOT already covered by these existing articles:
 ${existingTitles}

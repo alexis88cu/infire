@@ -23,7 +23,7 @@ export default function ContactPage() {
           <h2 style={{ fontSize: '1.1rem', fontWeight: 700, marginBottom: '1.5rem' }}>Our Info</h2>
           {[
             { icon: '📍', label: 'Location', value: 'Miami, Florida' },
-            { icon: '🌐', label: 'Website', value: 'infireinc.net' },
+            { icon: '🌐', label: 'Website', value: 'infireinc.com' },
             { icon: '📋', label: 'License', value: 'Licensed & Insured, State of FL' },
             { icon: '⏱️', label: 'Response Time', value: 'Within 24 hours' },
           ].map(item => (

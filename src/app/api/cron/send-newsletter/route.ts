@@ -18,7 +18,7 @@ export async function GET(req: NextRequest) {
 
   try {
     // Determine own base URL for internal API call
-    const host = req.headers.get('host') || 'infireinc.net';
+    const host = req.headers.get('host') || 'infireinc.com';
     const protocol = host.includes('localhost') ? 'http' : 'https';
     const baseUrl = `${protocol}://${host}`;
 

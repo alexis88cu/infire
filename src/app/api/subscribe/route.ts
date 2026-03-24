@@ -15,8 +15,8 @@ export async function POST(req: NextRequest) {
 
     const RESEND_API_KEY = process.env.RESEND_API_KEY;
     const RESEND_AUDIENCE_ID = process.env.RESEND_AUDIENCE_ID;
-    const ADMIN_EMAIL = process.env.ADMIN_EMAIL || 'info@infireinc.net';
-    const FROM_EMAIL = process.env.FROM_EMAIL || 'newsletter@infireinc.net';
+    const ADMIN_EMAIL = process.env.ADMIN_EMAIL || 'info@infireinc.com';
+    const FROM_EMAIL = process.env.FROM_EMAIL || 'newsletter@infireinc.com';
 
     if (!RESEND_API_KEY) {
       // Dev mode: log and return success
@@ -68,14 +68,14 @@ export async function POST(req: NextRequest) {
     <p style="color:#adb5bd;line-height:1.7;margin-bottom:28px;">
       While you wait for the next issue, catch up on our latest articles:
     </p>
-    <a href="https://infireinc.net/blog" style="display:inline-block;background:#f3793d;color:#fff;padding:12px 28px;border-radius:6px;font-weight:700;text-decoration:none;font-size:0.9rem;margin-bottom:32px;">
+    <a href="https://infireinc.com/blog" style="display:inline-block;background:#f3793d;color:#fff;padding:12px 28px;border-radius:6px;font-weight:700;text-decoration:none;font-size:0.9rem;margin-bottom:32px;">
       Read the Blog →
     </a>
     <div style="border-top:1px solid rgba(255,255,255,0.08);padding-top:20px;">
       <p style="color:#7d8590;font-size:0.78rem;line-height:1.6;margin:0;">
-        You're receiving this because you subscribed at infireinc.net.<br/>
-        <a href="https://infireinc.net" style="color:#f3793d;">Infire Inc.</a> · Miami, FL<br/>
-        <a href="https://infireinc.net/unsubscribe?email=${encodeURIComponent(email)}" style="color:#7d8590;">Unsubscribe</a>
+        You're receiving this because you subscribed at infireinc.com.<br/>
+        <a href="https://infireinc.com" style="color:#f3793d;">Infire Inc.</a> · Miami, FL<br/>
+        <a href="https://infireinc.com/unsubscribe?email=${encodeURIComponent(email)}" style="color:#7d8590;">Unsubscribe</a>
       </p>
     </div>
   </div>

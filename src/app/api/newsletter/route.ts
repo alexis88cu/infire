@@ -17,7 +17,7 @@ export async function POST(req: NextRequest) {
 
     const RESEND_API_KEY = process.env.RESEND_API_KEY;
     const RESEND_AUDIENCE_ID = process.env.RESEND_AUDIENCE_ID;
-    const FROM_EMAIL = process.env.FROM_EMAIL || 'newsletter@infireinc.net';
+    const FROM_EMAIL = process.env.FROM_EMAIL || 'newsletter@infireinc.com';
 
     if (!RESEND_API_KEY || !RESEND_AUDIENCE_ID) {
       return NextResponse.json({ message: 'Resend not configured.' }, { status: 500 });
@@ -32,7 +32,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ message: 'Article not found.' }, { status: 404 });
     }
 
-    const articleUrl = `https://infireinc.net/blog/${article.slug}`;
+    const articleUrl = `https://infireinc.com/blog/${article.slug}`;
 
     // Build email HTML
     const newsletterHtml = `
@@ -90,10 +90,10 @@ export async function POST(req: NextRequest) {
     <!-- Footer -->
     <div style="border-top:1px solid rgba(255,255,255,0.08);padding-top:20px;">
       <p style="color:#7d8590;font-size:0.78rem;line-height:1.6;margin:0;">
-        You're receiving this because you subscribed at <a href="https://infireinc.net" style="color:#f3793d;">infireinc.net</a><br/>
-        <a href="https://infireinc.net/blog" style="color:#7d8590;">View all articles</a> · 
-        <a href="https://infireinc.net/portfolio" style="color:#7d8590;">Our portfolio</a> · 
-        <a href="https://infireinc.net/unsubscribe?email={{email}}" style="color:#7d8590;">Unsubscribe</a>
+        You're receiving this because you subscribed at <a href="https://infireinc.com" style="color:#f3793d;">infireinc.com</a><br/>
+        <a href="https://infireinc.com/blog" style="color:#7d8590;">View all articles</a> · 
+        <a href="https://infireinc.com/portfolio" style="color:#7d8590;">Our portfolio</a> · 
+        <a href="https://infireinc.com/unsubscribe?email={{email}}" style="color:#7d8590;">Unsubscribe</a>
       </p>
     </div>
   </div>
