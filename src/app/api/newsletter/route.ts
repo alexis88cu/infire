@@ -1,26 +1,23 @@
 import { NextRequest, NextResponse } from 'next/server';
 import articles from '@/lib/blog.json';
+import { getAllSubscribers } from '@/lib/subscribers-store';
+import { sendEmail } from '@/lib/mailer';
 
-// POST /api/newsletter/send
+// POST /api/newsletter
 // Body: { slug?: string, secret: string }
-// Sends the latest (or specified) article to all Resend audience subscribers
+// Sends the latest (or specified) article to all newsletter subscribers via Gmail SMTP
 
 export async function POST(req: NextRequest) {
   try {
     const { slug, secret } = await req.json();
 
-    // Simple secret key check (falls back to CRON_SECRET if NEWSLETTER_SECRET not set)
     const NEWSLETTER_SECRET = process.env.NEWSLETTER_SECRET || process.env.CRON_SECRET;
     if (!NEWSLETTER_SECRET || secret !== NEWSLETTER_SECRET) {
       return NextResponse.json({ message: 'Unauthorized.' }, { status: 401 });
     }
 
-    const RESEND_API_KEY = process.env.RESEND_API_KEY;
-    const RESEND_AUDIENCE_ID = process.env.RESEND_AUDIENCE_ID;
-    const FROM_EMAIL = process.env.FROM_EMAIL || 'newsletter@infireinc.com';
-
-    if (!RESEND_API_KEY || !RESEND_AUDIENCE_ID) {
-      return NextResponse.json({ message: 'Resend not configured.' }, { status: 500 });
+    if (!process.env.GMAIL_USER) {
+      return NextResponse.json({ message: 'Gmail not configured.' }, { status: 500 });
     }
 
     // Get target article
@@ -32,16 +29,28 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ message: 'Article not found.' }, { status: 404 });
     }
 
+    // Get all newsletter subscribers
+    const allSubscribers = await getAllSubscribers();
+    const recipients = allSubscribers.filter(s => s.newsletter);
+
+    if (recipients.length === 0) {
+      return NextResponse.json({ success: true, sent: 0, article: article.slug, message: 'No newsletter subscribers.' });
+    }
+
     const articleUrl = `https://infireinc.com/blog/${article.slug}`;
 
-    // Build email HTML
-    const newsletterHtml = `
+    // Send to each subscriber individually
+    let sent = 0;
+    const errors: string[] = [];
+
+    for (const subscriber of recipients) {
+      const newsletterHtml = `
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8"><title>${article.title}</title></head>
 <body style="margin:0;padding:0;background:#0d1117;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;">
   <div style="max-width:600px;margin:0 auto;padding:40px 24px;">
-    
+
     <!-- Header -->
     <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:32px;border-bottom:1px solid rgba(255,255,255,0.08);padding-bottom:20px;">
       <span style="font-size:1.4rem;font-weight:900;color:#f3793d;">INFIRE</span>
@@ -65,7 +74,7 @@ export async function POST(req: NextRequest) {
       <p style="color:#c9d1d9;font-style:italic;line-height:1.7;margin:0;font-size:0.95rem;">${article.hook}</p>
     </div>` : ''}
 
-    <!-- Excerpt from body -->
+    <!-- Excerpt -->
     <p style="color:#adb5bd;line-height:1.7;margin-bottom:24px;font-size:0.92rem;">
       ${article.body ? article.body.split('\n\n')[0].replace(/\*\*/g,'').slice(0,280) + '...' : ''}
     </p>
@@ -91,49 +100,32 @@ export async function POST(req: NextRequest) {
     <div style="border-top:1px solid rgba(255,255,255,0.08);padding-top:20px;">
       <p style="color:#7d8590;font-size:0.78rem;line-height:1.6;margin:0;">
         You're receiving this because you subscribed at <a href="https://infireinc.com" style="color:#f3793d;">infireinc.com</a><br/>
-        <a href="https://infireinc.com/blog" style="color:#7d8590;">View all articles</a> · 
-        <a href="https://infireinc.com/portfolio" style="color:#7d8590;">Our portfolio</a> · 
-        <a href="https://infireinc.com/unsubscribe?email={{email}}" style="color:#7d8590;">Unsubscribe</a>
+        <a href="https://infireinc.com/blog" style="color:#7d8590;">View all articles</a> ·
+        <a href="https://infireinc.com/portfolio" style="color:#7d8590;">Our portfolio</a>
       </p>
     </div>
   </div>
 </body>
 </html>`;
 
-    // Send broadcast via Resend
-    const res = await fetch('https://api.resend.com/broadcasts', {
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${RESEND_API_KEY}`,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        audience_id: RESEND_AUDIENCE_ID,
-        from: `Infire Inc. <${FROM_EMAIL}>`,
-        subject: `${article.title} | Infire Weekly`,
-        html: newsletterHtml,
-        name: `Newsletter: ${article.slug}`,
-      }),
-    });
-
-    if (!res.ok) {
-      const err = await res.json();
-      return NextResponse.json({ message: 'Resend error', error: err }, { status: 500 });
+      try {
+        await sendEmail({
+          to: subscriber.email,
+          subject: `${article.title} | Infire Weekly`,
+          html: newsletterHtml,
+        });
+        sent++;
+      } catch (e: any) {
+        errors.push(`${subscriber.email}: ${e.message}`);
+      }
     }
-
-    const broadcast = await res.json();
-
-    // Auto-send the broadcast
-    const sendRes = await fetch(`https://api.resend.com/broadcasts/${broadcast.id}/send`, {
-      method: 'POST',
-      headers: { 'Authorization': `Bearer ${RESEND_API_KEY}` },
-    });
 
     return NextResponse.json({
       success: true,
-      broadcast_id: broadcast.id,
       article: article.slug,
-      sent: sendRes.ok,
+      sent,
+      total: recipients.length,
+      errors: errors.length > 0 ? errors : undefined,
     });
 
   } catch (err) {
